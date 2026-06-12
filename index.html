@@ -140,7 +140,6 @@
         <!-- section our events -->
         <div class="events">
             <h1>Our Events</h1>
-            
             <div class="carousel-wrapper">
                 <div class="events-list" id="eventTrack">
                     
@@ -202,6 +201,101 @@
 
         </div>
         <!-- section our events -->
+
+        <!-- section timeline -->
+         <div class="timeline">
+            <h1>Timeline</h1>
+            <div class="container-timeline">
+                <img src="assets/timeline.png" alt="" srcset="">
+            </div>
+         </div>
+         <!-- section timeline -->
+
+        <!-- section faq -->
+        <div class="faq">
+            <h1>Frequently Asked Questions</h1>
+            <div class="container-faq">
+                
+                <div class="icn-faq">
+                    <img src="assets/icn-faq.svg" alt="" srcset="">
+                </div>
+                <div class="general-question">
+                    <div class="card-faq" onclick="toggleFAQ(this)">
+                        <div class="question">
+                            Kenapa harus memilih Konveksi tas spunbond dan paper bag Nailil Barokah?
+                            <span class="icon-faq">
+                                <iconify-icon icon="line-md:chevron-small-down" style="color: #797979"
+                                    width="30"></iconify-icon>
+                            </span>
+                        </div>
+                        <div class="text-faq">
+                            <p>
+                                - Pelayanan Yang Ramah <br>
+                                - Proses Pembuatan Yang Cepat <br>
+                                - Siap Pengiriman Luar Kota <br>
+                                - Menerima Pesanan Khusus Untuk Desain Tas <br>
+                                - Menggunakan Bahan Bahan Yang Berkualitas
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card-faq" onclick="toggleFAQ(this)">
+                        <div class="question">
+                            Kenapa harus memilih Konveksi tas spunbond dan paper bag Nailil Barokah?
+                            <span class="icon-faq">
+                                <iconify-icon icon="line-md:chevron-small-down" style="color: #797979"
+                                    width="30"></iconify-icon>
+                            </span>
+                        </div>
+                        <div class="text-faq">
+                            <p>
+                                - Pelayanan Yang Ramah <br>
+                                - Proses Pembuatan Yang Cepat <br>
+                                - Siap Pengiriman Luar Kota <br>
+                                - Menerima Pesanan Khusus Untuk Desain Tas <br>
+                                - Menggunakan Bahan Bahan Yang Berkualitas
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card-faq" onclick="toggleFAQ(this)">
+                        <div class="question">
+                            Kenapa harus memilih Konveksi tas spunbond dan paper bag Nailil Barokah?
+                            <span class="icon-faq">
+                                <iconify-icon icon="line-md:chevron-small-down" style="color: #797979"
+                                    width="30"></iconify-icon>
+                            </span>
+                        </div>
+                        <div class="text-faq">
+                            <p>
+                                - Pelayanan Yang Ramah <br>
+                                - Proses Pembuatan Yang Cepat <br>
+                                - Siap Pengiriman Luar Kota <br>
+                                - Menerima Pesanan Khusus Untuk Desain Tas <br>
+                                - Menggunakan Bahan Bahan Yang Berkualitas
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card-faq" onclick="toggleFAQ(this)">
+                        <div class="question">
+                            Kenapa harus memilih Konveksi tas spunbond dan paper bag Nailil Barokah?
+                            <span class="icon-faq">
+                                <iconify-icon icon="line-md:chevron-small-down" style="color: #797979"
+                                    width="30"></iconify-icon>
+                            </span>
+                        </div>
+                        <div class="text-faq">
+                            <p>
+                                - Pelayanan Yang Ramah <br>
+                                - Proses Pembuatan Yang Cepat <br>
+                                - Siap Pengiriman Luar Kota <br>
+                                - Menerima Pesanan Khusus Untuk Desain Tas <br>
+                                - Menggunakan Bahan Bahan Yang Berkualitas
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- section faq -->
     </main>
 
     <script>
@@ -218,6 +312,35 @@
             // Ganti warna dot
             dots.forEach(dot => dot.classList.remove('active'));
             dots[index].classList.add('active');
+        }
+
+        // faq
+        function toggleFAQ(card) {
+            // 1. Cari semua elemen dengan class 'card-faq'
+            const allCards = document.querySelectorAll(".card-faq");
+
+            // 2. Looping untuk menutup semua FAQ yang TIDAK sedang diklik
+            allCards.forEach((c) => {
+                if (c !== card) {
+                    const textContent = c.querySelector(".text-faq");
+                    const icon = c.querySelector("iconify-icon");
+                    
+                    textContent.style.display = "none";
+                    icon.classList.remove("rotate180");
+                }
+            });
+
+            // 3. Logika untuk membuka/menutup kartu yang sedang diklik
+            const textFAQ = card.querySelector(".text-faq");
+            const chevronIcon = card.querySelector("iconify-icon");
+
+            if (textFAQ.style.display === "none" || !textFAQ.style.display) {
+                textFAQ.style.display = "block";
+                chevronIcon.classList.add("rotate180");
+            } else {
+                textFAQ.style.display = "none";
+                chevronIcon.classList.remove("rotate180");
+            }
         }
     </script>
 </body>
