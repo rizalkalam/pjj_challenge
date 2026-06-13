@@ -1,0 +1,57 @@
+.header {
+    position: relative;
+}
+
+.logo {
+    background-color: #E8FF42;
+    padding: 5px 12px;
+    border-radius: 0px 0px 60px 0px;
+    position: absolute; 
+    z-index: 10;        
+}
+
+.logo img {
+    width: 80%;
+}
+
+.navbar {
+    position: relative; 
+    z-index: 1;
+    color: #fff;
+
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 0px 0px 10px 0px;
+
+    display: flex;
+    justify-content: flex-end;
+    padding: 16px 20px;
+    align-items: center;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    gap: 80px;
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.right-nav {
+    margin-left: 28%;
+    padding: 5px 16px;
+    background-color: #E8FF42;
+    color: #322098;
+    border-radius: 10px;
+}
+
+.right-nav p {
+    font-weight: 800;
+}

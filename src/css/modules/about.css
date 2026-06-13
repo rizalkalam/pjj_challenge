@@ -1,0 +1,232 @@
+/* About Section Styles */
+.about {
+    position: relative;
+    z-index: 2;
+    height: 120vh;
+}
+
+.about h1 {
+    color: #E8FF42;
+    font-size: 36px;
+    font-weight: 800;
+    text-align: center;
+    margin-top: 150px;
+    text-shadow: 0 0 15px rgba(232, 255, 66, 0.6);
+}
+
+.content-about {
+    margin: 30px 200px 50px 200px;
+    border-radius: 36px;
+    border: 1px solid #E8FF42;
+    background:#322098;
+}
+
+.content-about p {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 300;
+    text-align: center;
+    line-height: 1.6;
+    padding: 24px;
+}
+
+/* our journey */
+.journey-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    margin-top: 30px;
+    padding: 0px 72px;
+}
+
+.journey-title {
+    display: flex;
+    flex-direction: column;
+}
+
+.journey-title-1 {
+    color: #fff;
+    font-size: 48px;
+    font-weight: 300;
+}
+
+.journey-title-2 {
+    color: #E8FF42;
+    font-size: 60px;
+    font-weight: 800;
+    margin-top: -24px;
+}
+
+.journey-year-selection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+}
+
+.journey-year {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    border-radius: 12px;
+    padding: 5px 38px;
+    color: #fff;
+    font-weight: 300;
+}
+
+.journey-year p {
+    font-size: 24px;
+}
+
+.dropdown {
+    background: #E8FF42;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    height: 35px;
+}
+
+.dropdown img {
+    width: 80%;
+}
+
+.journey-content {
+    border-radius: 36px;
+    background:#322098;
+    margin: 16px 72px 50px 72px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.left-journey-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    width: 40%;
+    overflow: hidden;
+}
+
+.journey-bg {
+    position: absolute;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.journey-bg-1 {
+    width: 160px;
+    height: 160px;
+    transform: translate(170px, -60px);
+}
+
+.journey-bg-2 {
+    width: 240px;
+    height: 240px;
+    transform: translate(-195px, 180px);
+}
+
+.text-participant {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 30px 0px 0px 50px;
+}
+
+.spacing {
+    width: 30%;
+}
+
+.text-prize {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.journey-text-highlight {
+    color: #fff;
+    font-size: 70px;
+    font-weight: 800;
+}
+
+.journey-text-dsc {
+    color:#fff;
+    font-size: 28px;
+    font-weight: 300;
+    margin-top: -20px;
+}
+
+.journey-text-dsc-left {
+    color:#fff;
+    font-size: 28px;
+    font-weight: 300;
+    margin-bottom: -20px;
+}
+
+.journey-text-dsc-right {
+    color:#fff;
+    font-size: 28px;
+    font-weight: 300;
+    text-align: right;
+    margin-top: -20px;
+}
+
+.right-journey-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+    padding: 24px;
+    margin: 16px 16px 16px 0px;
+    border-radius: 36px;
+    background:#fff;
+}
+
+.journey-card {
+    background: rgba(50, 32, 152, 0.24);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.10);
+    border-radius: 18px;
+    padding: 24px;
+    color: #fff;
+    font-weight: 300;
+    width: 248px;
+    height: 316px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+}
+
+.journey-card-img {
+    width: 140px;
+    height: 140px;
+}
+
+.journey-card p {
+    font-size: 20px;
+    text-align: center;
+    color: #E0FF0F;
+}
+
+.participant-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    background:#fff;
+    padding: 8px 20px;
+    border-radius: 12px;
+}
+
+.participant-info p {
+    font-size: 18px;
+    font-weight: 500;
+    color: #9AB100;
+}

@@ -1,0 +1,12 @@
+{
+  "name": "pjj-challenge",
+  "version": "1.0.0",
+  "description": "Website PJJ Challenge UII",
+  "main": "src/index.html",
+  "scripts": {
+    "start": "echo 'Silakan buka src/index.html di browser Anda'"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

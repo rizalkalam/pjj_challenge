@@ -1,0 +1,17 @@
+/* 
+   Main Stylesheet
+   Project: PJJ Challenge
+   This file imports all modular styles.
+*/
+
+@import 'modules/variables.css';
+@import 'modules/base.css';
+@import 'modules/header.css';
+@import 'modules/banner.css';
+@import 'modules/about.css';
+@import 'modules/events.css';
+@import 'modules/timeline.css';
+@import 'modules/faq.css';
+@import 'modules/update.css';
+@import 'modules/support.css';
+@import 'modules/footer.css';
