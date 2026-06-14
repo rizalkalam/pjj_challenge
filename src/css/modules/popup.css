@@ -97,6 +97,8 @@
     font-size: 18px;
     font-weight: 700;
     cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
     transition: all 0.3s ease;
 }
 

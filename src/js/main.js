@@ -158,14 +158,18 @@ window.selectYear = function(year) {
 /**
  * Event Detail Popup Logic
  */
-window.openEventPopup = function(title, description) {
+window.openEventPopup = function(title, description, regLink) {
     const popup = document.getElementById('event-popup');
     const titleEl = document.getElementById('popup-title');
     const descEl = document.getElementById('popup-description');
+    const linkEl = document.getElementById('popup-reg-link');
     
     if (popup && titleEl && descEl) {
         titleEl.textContent = title;
         descEl.textContent = description;
+        if (linkEl && regLink) {
+            linkEl.href = regLink;
+        }
         popup.style.display = 'flex';
         // Force reflow for transition
         popup.offsetHeight;
