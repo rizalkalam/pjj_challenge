@@ -136,12 +136,3 @@
   width: 100%;
   display: block;
 }
-
-/* bg-pesawat */
-.bg-pesawat {
-    position: absolute;
-    z-index: 1;
-    top: 140%; 
-    right: -200px;
-    pointer-events: none;
-}

@@ -1,0 +1,16 @@
+/* --- 2. LAPTOP / SMALL DESKTOP (1025px - 1440px) --- */
+@media screen and (max-width: 1200px) {
+    .nav-mobile{
+        display: none;
+        visibility: hidden;
+    }
+    .content-about {
+        margin: 30px 100px;
+    }
+    .right-journey-content {
+        gap: 12px;
+    }
+    .journey-card {
+        width: 220px;
+    }
+}

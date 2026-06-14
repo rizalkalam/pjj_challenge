@@ -1,0 +1,367 @@
+/* --- 5. MOBILE (Smartphone) (< 480px) --- */
+@media screen and (max-width: 480px) {
+    /* Banner Mobile Adjustments */
+    .banner {
+        height: 70vh; /* Perkecil tinggi sedikit agar tidak terlalu panjang */
+    }
+    .text-pjj, .text-challenge {
+        font-size: 36px; /* Perkecil font dari 45px */
+    }
+    .text-challenge {
+        margin-top: -10px;
+    }
+    .content-banner {
+        gap: 30px; /* Perkecil gap antar konten */
+        padding-top: 100px;
+    }
+    .scroll {
+        margin-top: 70px;
+        padding: 4px 16px;
+        gap: 6px;
+    }
+    .scroll img {
+        width: 25px;
+        height: 25px;
+    }
+    .scroll p {
+        font-size: 14px;
+    }
+    .layer-orbit {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+    }
+    .layer-orbit img {
+        width: 120px; /* Perkecil ukuran asset orbit */
+        height: 120px;
+    }
+    .abstract-icon-1 {
+        transform: translate(-160px, -180px) rotate(-15deg);
+    }
+    .abstract-icon-2 {
+        transform: translate(-210px, 30px) rotate(-8deg);
+    }
+    .abstract-icon-3 {
+        transform: translate(100px, -20px) rotate(-8deg);
+    }
+    .divider {
+        margin-top: -114px; /* Sesuaikan posisi divider */
+    }
+
+    .about, .events, .timeline, .faq, .recent-update {
+        height: auto;
+        padding-bottom: 50px;
+    }
+    .about h1, .events h1, .timeline h1, .faq h1, .recent-update h1 {
+        margin-top: 50px;
+        font-size: 28px;
+    }
+    .content-about {
+        margin: 20px 15px;
+        border-radius: 20px;
+    }
+    .content-about p {
+        font-size: 14px;
+        padding: 16px;
+    }
+    /* Journey Mobile Adjustments */
+    .journey-header {
+        padding: 0 15px;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .journey-title-1 {
+        font-size: 24px;
+    }
+    .journey-title-2 {
+        font-size: 32px;
+        margin-top: -5px;
+    }
+    .journey-year-selection {
+        gap: 8px;
+    }
+    .journey-year p {
+        font-size: 18px;
+    }
+    .dropdown {
+        width: 30px;
+        height: 30px;
+    }
+    .journey-content {
+        flex-direction: column !important; /* Stack vertically on mobile */
+        margin: 16px 15px;
+        border-radius: 24px;
+        gap: 0;
+    }
+    .left-journey-content {
+        width: 100% !important;
+        padding: 20px 0;
+        gap: 20px;
+    }
+    .text-participant, .text-prize {
+        margin: 0;
+        justify-content: center;
+    }
+    .journey-text-highlight {
+        font-size: 40px;
+    }
+    .journey-text-dsc, .journey-text-dsc-left, .journey-text-dsc-right {
+        font-size: 16px;
+    }
+    .journey-bg-1 {
+        width: 80px;
+        height: 80px;
+        transform: translate(140px, -20px);
+    }
+    .journey-bg-2 {
+        width: 100px;
+        height: 100px;
+        transform: translate(50px, 80px);
+    }
+    .right-journey-content {
+        width: 100% !important;
+        margin: 0;
+        flex-direction: column;
+        padding: 20px;
+        gap: 15px;
+        border-radius: 24px;
+    }
+    .journey-card {
+        width: 100% !important;
+        padding: 20px;
+        height: auto !important;
+    }
+    .journey-card-img {
+        width: 70px;
+        height: 70px;
+    }
+    .journey-card p {
+        font-size: 16px;
+    }
+    .participant-info p {
+        font-size: 14px;
+    }
+
+    .journey-card {
+        width: 100%;
+        height: auto;
+    }
+
+    /* Events Mobile Adjustments */
+    .events {
+        height: auto;
+    }
+    .carousel-wrapper {
+        padding-top: 60px;
+        overflow-x: auto; /* Enable horizontal scroll */
+        scroll-snap-type: x mandatory; /* Smooth snap */
+        -webkit-overflow-scrolling: touch; /* Momentum scroll for iOS */
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .carousel-wrapper::-webkit-scrollbar {
+        display: none; /* Hide scrollbar for cleaner look */
+    }
+    .events-list {
+        display: flex;
+        gap: 20px;
+        width: max-content; /* Allow content to dictate width */
+        transform: none !important; /* Disable JS transform on mobile */
+    }
+    .events-card-container {
+        max-width: 280px;
+        flex: 0 0 280px; /* Fixed width for snapping */
+        scroll-snap-align: center; /* Snap to center */
+    }
+    .icn-events {
+        width: 130px;
+        left: 70px;
+        top: -15%;
+    }
+    .events-card p {
+        font-size: 20px;
+        margin-top: -30px;
+    }
+    .events-btn {
+        gap: 8px;
+        margin-bottom: 20px;
+    }
+    .btn-register, .btn-detail {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+    .carousel-indicators {
+        display: none !important; /* Hide indicators on mobile as scroll is native */
+    }
+
+    /* Timeline Mobile Adjustments */
+    .timeline {
+        height: auto;
+    }
+    .container-timeline {
+        margin-left: 0;
+        gap: 40px;
+        position: relative;
+        padding: 20px 0;
+    }
+    /* Garis Hijau Timeline */
+    .container-timeline::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 4px;
+        background-color: #E8FF42;
+        z-index: 0;
+    }
+    .content-timeline, .content-timeline-reverse {
+        position: relative;
+        flex-direction: column;
+        z-index: 1;
+    }
+    .card-timeline {
+        width: 180px;
+        height: 230px;
+        padding: 10px 10px;
+        border-radius: 40px;
+        position: relative;
+        /* Popup Effect */
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+        overflow: hidden;
+        border-radius: 70px;
+    }
+    .card-timeline p {
+        font-size: 16px;
+        line-height: 18px;
+        margin-top: 20px;
+    }
+    .circle-card-timeline {
+        width: 120px;
+        height: 120px;
+        margin-bottom: 10px;
+    }
+    .circle-card-timeline img {
+        width: 140%;
+    }
+    /* Centering Icons inside Circles */
+    .icn-card-timeline, .icn-card-timeline-reverse {
+        position: absolute;
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+        width: 120px !important;
+        height: auto;
+        z-index: 2;
+    }
+    .icn-card-timeline {
+        top: 40% !important;
+    }
+    .icn-card-timeline-reverse {
+        top: 40% !important;
+    }
+    .line-timeline, .line-timeline-reverse {
+        display: none;
+    }
+    .date-legend {
+        position: relative;
+        z-index: 2;
+    }
+    .date-legend p {
+        font-size: 16px;
+    }
+    .fill-card-timeline {
+        display: none;
+    }
+
+    /* FAQ Mobile Adjustments */
+    .container-faq {
+        padding: 0 15px;
+    }
+    .question, .text-faq {
+        font-size: 16px;
+    }
+    .card-faq {
+        padding: 15px;
+    }
+
+    /* Recent Update Mobile Adjustments */
+    .static-carousel {
+        flex-direction: column;
+        gap: 30px;
+        margin-top: 40px;
+    }
+    .side-card {
+        display: none; /* Show only main news on mobile */
+    }
+    .center-card {
+        width: 85%;
+        height: auto;
+        transform: scale(1);
+    }
+    .center-card img {
+        height: auto;
+    }
+
+    /* Support Mobile Adjustments */
+    .support-wrapper {
+        height: auto;
+        gap: 60px;
+        padding: 60px 0;
+    }
+    .container-support {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+    }
+    .organized-by-text {
+        padding: 8px 40px;
+    }
+    .organized-by-text p {
+        font-size: 16px;
+    }
+    .organized-by-text img{
+        width: 100%;
+    }
+    .pjj-logo {
+        width: 120px;
+        padding: 10px;
+    }
+    .support-by {
+        width: 90%;
+        padding: 20px;
+        border-radius: 20px;
+    }
+    .support-by p {
+        font-size: 18px;
+    }
+    .support-by-img-container {
+        gap: 30px;
+        flex-wrap: wrap;
+    }
+    .support-by-img-container img {
+        width: 80px;
+    }
+    .contact-content p {
+        font-size: 14px;
+    }
+    .contact-wrapper {
+        width: 280px;
+    }
+
+    /* Footer Mobile Adjustments */
+    .footer {
+        /* flex-direction: column; */
+        gap: 15px;
+        text-align: center;
+        padding: 20px;
+    }
+    .footer img{
+        width: 20px;
+    }
+    .ig-wrapper p, .web-wrapper p {
+        font-size: 12px;
+    }
+}

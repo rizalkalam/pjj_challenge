@@ -196,8 +196,8 @@
     padding: 24px;
     color: #fff;
     font-weight: 300;
-    width: 248px;
-    height: 316px;
+    /* width: 248px;
+    height: 316px; */
     display: flex;
     flex-direction: column;
     gap: 12px;

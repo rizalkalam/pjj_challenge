@@ -8,9 +8,13 @@
   scroll-behavior: smooth;
 }
 
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+}
+
 body {
     background: linear-gradient(var(--color-primary), var(--color-secondary));
     background-repeat: no-repeat;
     min-height: 100vh;
-    overflow-x: hidden;
 }
