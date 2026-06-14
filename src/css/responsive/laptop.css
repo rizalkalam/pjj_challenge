@@ -13,6 +13,9 @@
     .journey-card {
         width: 220px;
     }
+    .participant-info p {
+        font-size: 16px;
+    }
    .general-question{
         min-width: 55vh;
     }

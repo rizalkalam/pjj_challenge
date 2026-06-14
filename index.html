@@ -85,9 +85,20 @@
                         <p class="journey-title-1">Our Journey</p>
                         <p class="journey-title-2">Year Over Year</p>
                     </div>
-                    <div class="journey-year-selection">
-                        <div class="journey-year"><p>2025</p></div>
-                        <div class="dropdown"><img src="src/assets/icons/icon_down.svg" alt=""></div>
+                    <div class="journey-year-selection" id="journey-year-dropdown">
+                        <div class="journey-year-display">
+                            <p id="display-year">2025</p>
+                            <!-- List opsi yang muncul di bawah -->
+                            <ul class="year-options-list" id="year-options">
+                                <li onclick="selectYear('2025')">2025</li>
+                                <!-- Tambahkan tahun lain di sini -->
+                            </ul>
+                        </div>
+                        <div class="year-select-trigger" onclick="toggleYearDropdown()">
+                            <div class="dropdown-icon-box">
+                                <img src="src/assets/icons/icon_down.svg" alt="" id="dropdown-icon">
+                            </div>
+                        </div>
                     </div>
                 </header>
                 
@@ -99,7 +110,7 @@
                         </div>
                         <div class="text-participant">
                             <div>
-                                <p class="journey-text-highlight">375+</p>
+                                <p class="journey-text-highlight">900+</p>
                                 <p class="journey-text-dsc">Total Peserta</p>
                             </div>
                             <div class="spacing"></div>
@@ -108,7 +119,7 @@
                             <div class="spacing"></div>
                             <div>
                                 <p class="journey-text-dsc-left">Total Hadiah</p>
-                                <p class="journey-text-highlight">Rp40+</p>
+                                <p class="journey-text-highlight">Rp15+</p>
                                 <p class="journey-text-dsc-right">Juta</p>
                             </div>
                         </div>
@@ -118,26 +129,26 @@
                         <!-- Journey Cards -->
                         <div class="journey-card">
                             <img class="journey-card-img" src="src/assets/icons/brain-icn.svg" alt="">
-                            <p>Daily Brain Challenge</p>
+                            <p class="title-event-journey">Brain Challenge Week</p>
                             <div class="participant-info">
                                 <img src="src/assets/icons/majesticons_user.svg" alt="">
                                 <p>150 Peserta</p>
                             </div>
                         </div>
                         <div class="journey-card">
-                            <img class="journey-card-img" src="src/assets/icons/brain-icn.svg" alt="">
-                            <p>Daily Brain Challenge</p>
+                            <img class="journey-card-img" src="src/assets/icons/essay-icn-small.svg" alt="">
+                            <p class="title-event-journey">Esai</p>
                             <div class="participant-info">
                                 <img src="src/assets/icons/majesticons_user.svg" alt="">
-                                <p>150 Peserta</p>
+                                <p>468 Peserta</p>
                             </div>
                         </div>
                         <div class="journey-card">
-                            <img class="journey-card-img" src="src/assets/icons/brain-icn.svg" alt="">
-                            <p>Daily Brain Challenge</p>
+                            <img class="journey-card-img" src="src/assets/icons/poster-icn.svg" alt="">
+                            <p class="title-event-journey">Poster</p>
                             <div class="participant-info">
                                 <img src="src/assets/icons/majesticons_user.svg" alt="">
-                                <p>150 Peserta</p>
+                                <p>227 Peserta</p>
                             </div>
                         </div>
                     </div>

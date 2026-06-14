@@ -82,10 +82,20 @@
     .journey-year-selection {
         gap: 8px;
     }
-    .journey-year p {
+    .journey-year-display p {
         font-size: 18px;
     }
-    .dropdown {
+    .journey-year-display {
+        padding: 6px 20px;
+    }
+    .year-options-list {
+        top: calc(100% + 5px);
+    }
+    .year-options-list li {
+        padding: 8px 20px;
+        font-size: 16px;
+    }
+    .year-select-trigger, .dropdown-icon-box {
         width: 30px;
         height: 30px;
     }

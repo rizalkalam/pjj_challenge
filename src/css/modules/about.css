@@ -65,7 +65,8 @@
     gap: 12px;
 }
 
-.journey-year {
+.journey-year-display {
+    position: relative;
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(8px);
     border: 1px solid rgba(255, 255, 255, 0.10);
@@ -75,11 +76,67 @@
     font-weight: 300;
 }
 
-.journey-year p {
+.journey-year-display p {
     font-size: 24px;
 }
 
-.dropdown {
+.year-options-list {
+    position: absolute;
+    top: calc(100% + 8px); /* Muncul tepat di bawah container */
+    left: 0;
+    width: 100%;
+    background: rgba(16, 11, 50, 0.95);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(232, 255, 66, 0.3);
+    border-radius: 12px;
+    list-style: none;
+    padding: 8px 0;
+    display: none; /* Sembunyikan secara default */
+    flex-direction: column;
+    z-index: 10;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+}
+
+.year-options-list.active {
+    display: flex; /* Tampilkan saat aktif */
+}
+
+.year-options-list li {
+    padding: 10px 38px;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.year-options-list li:hover {
+    background: rgba(232, 255, 66, 0.1);
+    color: #E8FF42;
+}
+
+.year-select-trigger {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.journey-year-select-hidden {
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    opacity: 0; /* Membuat select tidak terlihat */
+    cursor: pointer;
+    z-index: 2; /* Di atas icon agar klik terdeteksi select */
+}
+
+.journey-year-select-hidden option {
+    background: #100B32;
+    color: #fff;
+}
+
+.dropdown-icon-box {
     background: #E8FF42;
     border-radius: 100%;
     display: flex;
@@ -87,9 +144,10 @@
     align-items: center;
     width: 35px;
     height: 35px;
+    z-index: 1;
 }
 
-.dropdown img {
+.dropdown-icon-box img {
     width: 80%;
 }
 

@@ -122,3 +122,43 @@ window.toggleFAQ = function(card) {
         if (chevronIcon) chevronIcon.classList.remove("rotate180");
     }
 }
+
+/**
+ * Update Journey Year Display and Selection
+ */
+window.toggleYearDropdown = function() {
+    const list = document.getElementById('year-options');
+    const icon = document.getElementById('dropdown-icon');
+    if (list) {
+        list.classList.toggle('active');
+        if (icon) {
+            icon.style.transform = list.classList.contains('active') ? 'rotate(180deg)' : 'rotate(0deg)';
+            icon.style.transition = '0.3s ease';
+        }
+    }
+}
+
+window.selectYear = function(year) {
+    const display = document.getElementById('display-year');
+    const list = document.getElementById('year-options');
+    const icon = document.getElementById('dropdown-icon');
+    
+    if (display) display.textContent = year;
+    if (list) list.classList.remove('active');
+    if (icon) icon.style.transform = 'rotate(0deg)';
+    
+    // Logika tambahan untuk ganti data journey per tahun bisa ditaruh di sini
+    console.log("Tahun dipilih:", year);
+}
+
+// Close dropdown when clicking outside
+document.addEventListener('click', function(event) {
+    const dropdown = document.getElementById('journey-year-dropdown');
+    const list = document.getElementById('year-options');
+    const icon = document.getElementById('dropdown-icon');
+    
+    if (dropdown && !dropdown.contains(event.target)) {
+        if (list) list.classList.remove('active');
+        if (icon) icon.style.transform = 'rotate(0deg)';
+    }
+});
