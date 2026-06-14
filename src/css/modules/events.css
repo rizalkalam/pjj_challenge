@@ -76,6 +76,19 @@
     color: #fff;
     font-size: 18px;
     font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-register:hover {
+    background-color: #E8FF42;
+    box-shadow: 0 0 20px rgba(232, 255, 66, 0.5);
+    transform: translateY(-2px);
+}
+
+.btn-register:active {
+    transform: translateY(0);
 }
 
 .btn-detail {
@@ -86,6 +99,19 @@
     color: #CBE600;
     font-size: 18px;
     font-weight: 400;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-detail:hover {
+    background-color: #E8FF42;
+    color: #100B32;
+    box-shadow: 0 0 15px rgba(232, 255, 66, 0.4);
+    transform: translateY(-2px);
+}
+
+.btn-detail:active {
+    transform: translateY(0);
 }
 
 /* CSS CAROUSEL */
@@ -130,4 +156,5 @@
     background-color: #E8FF42;
     width: 32px;
     border-radius: 10px;
+    box-shadow: 0 0 10px rgba(232, 255, 66, 0.6);
 }

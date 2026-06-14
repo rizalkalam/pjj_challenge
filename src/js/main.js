@@ -72,14 +72,18 @@ function initTimer() {
 window.moveSlide = function(index) {
     const track = document.getElementById('eventTrack');
     const cards = track.querySelectorAll('.events-card-container');
+    const dots = document.querySelectorAll('.dot');
     
     if (!track || cards.length <= 3) return; 
 
-    const dots = document.querySelectorAll('.dot');
-    const slideDistance = 348; 
+    // Hitung jarak geser (lebar container + gap)
+    const cardWidth = cards[0].offsetWidth;
+    const gap = 28; // Sesuai CSS gap: 28px
+    const slideDistance = cardWidth + gap;
     
     track.style.transform = `translateX(-${index * slideDistance}px)`;
     
+    // Update dots
     dots.forEach(dot => dot.classList.remove('active'));
     if (dots[index]) dots[index].classList.add('active');
 }
@@ -151,14 +155,39 @@ window.selectYear = function(year) {
     console.log("Tahun dipilih:", year);
 }
 
-// Close dropdown when clicking outside
-document.addEventListener('click', function(event) {
-    const dropdown = document.getElementById('journey-year-dropdown');
-    const list = document.getElementById('year-options');
-    const icon = document.getElementById('dropdown-icon');
+/**
+ * Event Detail Popup Logic
+ */
+window.openEventPopup = function(title, description) {
+    const popup = document.getElementById('event-popup');
+    const titleEl = document.getElementById('popup-title');
+    const descEl = document.getElementById('popup-description');
     
-    if (dropdown && !dropdown.contains(event.target)) {
-        if (list) list.classList.remove('active');
-        if (icon) icon.style.transform = 'rotate(0deg)';
+    if (popup && titleEl && descEl) {
+        titleEl.textContent = title;
+        descEl.textContent = description;
+        popup.style.display = 'flex';
+        // Force reflow for transition
+        popup.offsetHeight;
+        popup.classList.add('active');
+        document.body.style.overflow = 'hidden'; // Lock vertical scroll
+    }
+}
+
+window.closeEventPopup = function(event) {
+    const popup = document.getElementById('event-popup');
+    if (popup) {
+        popup.classList.remove('active');
+        document.body.style.overflow = ''; // Unlock scroll
+        setTimeout(() => {
+            popup.style.display = 'none';
+        }, 300);
+    }
+}
+
+// Close popup with Esc key
+document.addEventListener('keydown', function(event) {
+    if (event.key === "Escape") {
+        closeEventPopup();
     }
 });

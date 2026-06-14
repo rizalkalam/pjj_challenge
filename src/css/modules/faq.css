@@ -56,6 +56,7 @@
 .text-faq {
   font-size: 20px;
   color: #fff;
+  max-width: 94vh;
 }
 
 .question {

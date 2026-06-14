@@ -173,8 +173,8 @@
                             <img class="neon-blur1" src="src/assets/graphics/neon-blur1.svg" alt="">
                             <p>Catch The Moment</p>
                             <div class="events-btn">
-                                <button class="btn-register">Daftar Sekarang</button>
-                                <button class="btn-detail">Detail</button>
+                                <a class="btn-register" href="https://docs.google.com/forms/d/e/1FAIpQLScYjebvwhRCSILhY2_TCQU9msaihVs2Xsl8mgL8XJ-GZ4GkFg/viewform">Daftar Sekarang!</a>
+                                <button class="btn-detail" onclick="openEventPopup('Catch The Moment', 'Ambil momen terbaikmu dalam kompetisi fotografi digital ini. Tunjukkan kreativitasmu dalam menangkap esensi teknologi dan kemanusiaan.')">Detail</button>
                             </div>
                         </div>
                     </div>
@@ -184,8 +184,8 @@
                             <img class="neon-blur1" src="src/assets/graphics/neon-blur1.svg" alt="">
                             <p>Short Paper</p>
                             <div class="events-btn">
-                                <button class="btn-register">Daftar Sekarang</button>
-                                <button class="btn-detail">Detail</button>
+                                <a class="btn-register" href="https://docs.google.com/forms/d/e/1FAIpQLScYjebvwhRCSILhY2_TCQU9msaihVs2Xsl8mgL8XJ-GZ4GkFg/viewform">Daftar Sekarang!</a>
+                                <button class="btn-detail" onclick="openEventPopup('Short Paper', 'Tuangkan pemikiran kritis dan solutifmu dalam bentuk karya tulis ilmiah pendek. Fokus pada inovasi teknologi informasi masa depan.')">Detail</button>
                             </div>
                         </div>
                     </div>
@@ -195,8 +195,8 @@
                             <img class="neon-blur1" src="src/assets/graphics/neon-blur1.svg" alt="">
                             <p>Essay</p>
                             <div class="events-btn">
-                                <button class="btn-register">Daftar Sekarang</button>
-                                <button class="btn-detail">Detail</button>
+                                <a class="btn-register" href="https://docs.google.com/forms/d/e/1FAIpQLScYjebvwhRCSILhY2_TCQU9msaihVs2Xsl8mgL8XJ-GZ4GkFg/viewform">Daftar Sekarang!</a>
+                                <button class="btn-detail" onclick="openEventPopup('Essay', 'Ekspresikan pandanganmu mengenai perkembangan dunia digital dan dampaknya bagi masyarakat melalui esai yang mendalam.')">Detail</button>
                             </div>
                         </div>
                     </div>
@@ -207,6 +207,21 @@
                 <span class="dot" onclick="moveSlide(1)"></span>
             </div>
         </section>
+
+        <!-- Event Detail Popup Overlay -->
+        <div id="event-popup" class="popup-overlay" onclick="closeEventPopup(event)">
+            <div class="popup-content" onclick="event.stopPropagation()">
+                <button class="popup-close" onclick="closeEventPopup()">
+                    <iconify-icon icon="line-md:close" width="24"></iconify-icon>
+                </button>
+                <div class="popup-body">
+                    <h2 id="popup-title">Event Title</h2>
+                    <div class="popup-divider"></div>
+                    <p id="popup-description">Event description goes here...</p>
+                    <button class="btn-register-popup">Daftar Sekarang</button>
+                </div>
+            </div>
+        </div>
 
         <!-- ==========================================
              5. TIMELINE
@@ -232,7 +247,7 @@
                         <img class="icn-card-timeline-reverse" src="src/assets/icons/icn-rocket.svg" alt="">
                     </div>
                     <div class="line-timeline-reverse"><img src="src/assets/graphics/line-above.svg" alt=""><div class="line-dot-reverse"></div></div>
-                    <div class="date-legend"><p>17 - 28 Juni 2026</p></div>
+                    <div class="date-legend"><p>22 - 28 Juni 2026</p></div>
                     <div class="fill-card-timeline"></div>
                 </div>
                 <div class="content-timeline">
@@ -242,7 +257,7 @@
                         <img class="icn-card-timeline" src="src/assets/icons/icn-assesment.svg" alt="">
                     </div>
                     <div class="line-timeline"><img src="src/assets/graphics/line-below.svg" alt=""><div class="line-dot"></div></div>
-                    <div class="date-legend"><p>17 - 28 Juni 2026</p></div>
+                    <div class="date-legend"><p>29 - 2 Juli 2026</p></div>
                     <div class="fill-card-timeline"></div>
                 </div>
                 <div class="content-timeline-reverse">
@@ -252,7 +267,7 @@
                         <img class="icn-card-timeline-reverse" src="src/assets/icons/icn-toa.svg" alt="">
                     </div>
                     <div class="line-timeline-reverse"><img src="src/assets/graphics/line-above.svg" alt=""><div class="line-dot-reverse"></div></div>
-                    <div class="date-legend"><p>17 - 28 Juni 2026</p></div>
+                    <div class="date-legend"><p>3 Juli 2026</p></div>
                     <div class="fill-card-timeline"></div>
                 </div>
             </div>
@@ -267,12 +282,12 @@
                 <div class="icn-faq"><img src="src/assets/icons/icn-faq.svg" alt=""></div>
                 <div class="general-question">
                     <div class="card-faq" onclick="toggleFAQ(this)">
-                        <div class="question">Kenapa harus memilih Konveksi tas spunbond? <span class="icon-faq"><iconify-icon icon="line-md:chevron-small-down" style="color: #797979" width="30"></iconify-icon></span></div>
-                        <div class="text-faq"><p>- Pelayanan Ramah<br>- Cepat<br>- Berkualitas</p></div>
+                        <div class="question">Siapa saja yang bisa mengikuti PJJ Challenge dan berapa biaya pendaftarannya?<span class="icon-faq"><iconify-icon icon="line-md:chevron-small-down" style="color: #797979" width="30"></iconify-icon></span></div>
+                        <div class="text-faq"><p>PJJ Challenge TERBUKA UNTUK UMUM dan TANPA BATASAN USIA! Siapa pun kamu, baik pelajar, mahasiswa, maupun profesional, semuanya bisa ikut seru-seruan di sini. Yang paling penting, seluruh rangkaian kompetisi ini 100% GRATIS tanpa dipungut biaya pendaftaran sepeser pun.</p></div>
                     </div>
                     <div class="card-faq" onclick="toggleFAQ(this)">
-                        <div class="question">Apakah menerima pesanan khusus? <span class="icon-faq"><iconify-icon icon="line-md:chevron-small-down" style="color: #797979" width="30"></iconify-icon></span></div>
-                        <div class="text-faq"><p>Ya, kami menerima pesanan khusus sesuai desain Anda.</p></div>
+                        <div class="question">Ada kategori lomba apa saja di PJJ Challenge 2026?<span class="icon-faq"><iconify-icon icon="line-md:chevron-small-down" style="color: #797979" width="30"></iconify-icon></span></div>
+                        <div class="text-faq"><p>Catch The Moment, Short Paper, Essay</p></div>
                     </div>
                 </div>
             </div>
