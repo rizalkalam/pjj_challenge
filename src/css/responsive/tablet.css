@@ -279,6 +279,10 @@
         width: 100%;
     }
 
+    .general-question{
+        min-width: 60%;
+    }
+
     /* Recent Update Tablet Scaling */
     .recent-update {
         height: 54vh;

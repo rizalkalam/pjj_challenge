@@ -113,12 +113,12 @@
     .journey-bg-1 {
         width: 80px;
         height: 80px;
-        transform: translate(140px, -20px);
+        transform: translate(180px, -50px);
     }
     .journey-bg-2 {
         width: 100px;
         height: 100px;
-        transform: translate(50px, 80px);
+        transform: translate(-10px, 50px);
     }
     .right-journey-content {
         width: 100% !important;
@@ -147,6 +147,11 @@
     .journey-card {
         width: 100%;
         height: auto;
+    }
+
+    .bg-pesawat {
+        top: 14%; 
+        right: -110px;
     }
 
     /* Events Mobile Adjustments */
@@ -277,8 +282,18 @@
     }
 
     /* FAQ Mobile Adjustments */
+    .faq{
+        padding: 0px 20px;
+    }
+    .icn-faq{
+        visibility: hidden;
+    }
     .container-faq {
-        padding: 0 15px;
+        /* display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0px 15px; */
     }
     .question, .text-faq {
         font-size: 16px;

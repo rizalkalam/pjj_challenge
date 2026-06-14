@@ -13,4 +13,7 @@
     .journey-card {
         width: 220px;
     }
+   .general-question{
+        min-width: 55vh;
+    }
 }

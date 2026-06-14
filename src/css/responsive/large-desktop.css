@@ -35,6 +35,38 @@
         right: 80px;
         pointer-events: none;
     }
+    .icn-card-timeline {
+        position: absolute;
+        z-index: 1;
+        top: 25%;
+    }
+
+    .icn-card-timeline-reverse {
+        position: absolute;
+        z-index: 1;
+        top: 55%;
+    }
+    .icn-faq{
+        width: 30%;
+    }
+    .container-faq img{
+        width: 100%;
+    }
+    .general-question{
+        min-width: 60%;
+    }
+
+    .container-support {
+        display: flex;
+        justify-content: center;
+        gap: 80px;
+    }
+
+    .support-by {
+        width: 100%;
+        gap: 12px;
+        padding: 0px 40px;
+    }
 }
 
 @media screen and (min-width: 1200px) and (max-width: 1440px) {
@@ -49,5 +81,15 @@
         top: 119%; 
         right: -170px;
         pointer-events: none;
+    }
+
+    .icn-faq{
+        width: 30%;
+    }
+    .container-faq img{
+        width: 100%;
+    }
+    .general-question{
+        min-width: 60%;
     }
 }
