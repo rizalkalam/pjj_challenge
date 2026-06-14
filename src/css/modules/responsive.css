@@ -1,0 +1,315 @@
+/* 
+   Responsive Stylesheet - PJJ Challenge
+   Breakpoints: Mobile, Tablet, Laptop, Desktop, Large Desktop
+*/
+
+/* --- 1. LARGE DESKTOP (> 1440px) --- */
+@media screen and (min-width: 1441px) {
+    .nav-mobile{
+        display: none;
+        visibility: hidden;
+    }
+
+    .aksen-squareline{
+        width: 100%;
+    }
+    .divider{
+        margin-top: -580px;
+    }
+    .container-support, .journey-content, .content-about {
+        max-width: 1400px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .nav-mobile{
+        display: none;
+        visibility: hidden;
+    }
+}
+
+/* --- 2. LAPTOP / SMALL DESKTOP (1025px - 1440px) --- */
+@media screen and (max-width: 1200px) {
+    .nav-mobile{
+        display: none;
+        visibility: hidden;
+    }
+    .content-about {
+        margin: 30px 100px;
+    }
+    .right-journey-content {
+        gap: 12px;
+    }
+    .journey-card {
+        width: 220px;
+    }
+}
+
+/* --- 3. TABLET (769px - 1024px) --- */
+@media screen and (max-width: 1024px) {
+    .logo {
+        width: 150px; /* Diperbesar sedikit lagi dari 130px */
+        border-radius: 0px 0px 55px 0px; 
+        z-index: 12;
+    }
+    .logo img {
+        width: 85%; /* Skala gambar ditingkatkan agar lebih mantap */
+    }
+    .navbar {
+        display: flex;
+        justify-content: flex-end; 
+        padding: 10px 15px;
+        gap: 15px;
+        z-index: 10; 
+    }
+
+    .hamburger {
+        display: flex; /* Gunakan flex untuk center icon */
+        align-items: center;
+        justify-content: center;
+        order: 2; /* Setelah timer */
+        z-index: 14;
+    }
+
+    .right-nav {
+        order: 1; /* Sebelum hamburger */
+        min-width: 100px;
+        font-size: 14px;
+        padding: 4px 10px;
+    }
+
+    .nav-links {
+        display: none;
+        visibility: hidden;
+    }
+
+    .nav-mobile.active {
+        display: flex;
+        visibility: visible;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+        width: 100%;
+        transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        margin-top: -20px;
+        padding: 40px 20px 20px 40px;
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(12px);
+        border-radius: 0px 0px 18px 18px;
+        position: absolute;
+        z-index: 9;
+        list-style: none;
+    }
+
+     .nav-mobile{
+        display: none;
+        visibility: hidden;
+    }
+
+    .nav-mobile a {
+        color: #fff;
+        text-decoration: none;
+    }
+    .right-nav {
+        grid-column: 3;
+        min-width: 130px; /* Samakan dengan desktop agar stabil saat angka berubah */
+        padding: 5px 12px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .right-nav p {
+        font-variant-numeric: tabular-nums; /* Memastikan angka tidak menggeser lebar */
+        margin: 0;
+    }
+    .content-about {
+        margin: 30px 50px;
+    }
+    .journey-content {
+        flex-direction: column;
+        margin: 16px 50px;
+    }
+    .left-journey-content {
+        width: 100%;
+        padding-bottom: 20px;
+    }
+    .right-journey-content {
+        margin: 0;
+        width: 100%;
+        justify-content: center;
+    }
+    .container-timeline {
+        flex-wrap: wrap;
+        gap: 50px;
+    }
+}
+
+/* --- 4. LARGE MOBILE / SMALL TABLET (481px - 768px) --- */
+@media screen and (max-width: 768px) {
+    .logo {
+        width: 128px; 
+        z-index: 11; /* Naikkan z-index agar di atas navbar */
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .navbar {
+        display: flex;
+        justify-content: flex-end; 
+        padding: 0px 15px;
+        gap: 15px;
+        z-index: 10; 
+    }
+
+    .hamburger {
+        display: flex; /* Gunakan flex untuk center icon */
+        align-items: center;
+        justify-content: center;
+        order: 2; /* Setelah timer */
+        z-index: 14;
+    }
+
+    .right-nav {
+        order: 1; /* Sebelum hamburger */
+        min-width: 100px;
+        font-size: 14px;
+        padding: 4px 10px;
+    }
+
+    .nav-links {
+        display: none;
+        visibility: hidden;
+    }
+
+    .nav-mobile.active {
+        display: flex;
+        visibility: visible;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+        width: 100%;
+        transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        margin-top: -20px;
+        padding: 40px 20px 20px 40px;
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(12px);
+        border-radius: 0px 0px 18px 18px;
+        position: absolute;
+        z-index: 9;
+        list-style: none;
+    }
+
+     .nav-mobile{
+        display: none;
+        visibility: hidden;
+    }
+
+    .nav-mobile a {
+        color: #fff;
+        text-decoration: none;
+    }
+
+    .text-pjj, .text-challenge {
+        font-size: 60px;
+    }
+    .text-challenge {
+        margin-top: -20px;
+    }
+    .layer-orbit {
+        display: none; /* Hide complex orbits on smaller screens */
+    }
+    .content-about {
+        margin: 30px 20px;
+    }
+    .journey-header {
+        flex-direction: column;
+        text-align: center;
+        padding: 0 20px;
+    }
+    .journey-title-2 {
+        font-size: 40px;
+    }
+    .right-journey-content {
+        flex-wrap: wrap;
+    }
+    .container-timeline {
+        flex-direction: column;
+        align-items: center;
+    }
+    .container-faq {
+        flex-direction: column;
+        align-items: center;
+        padding: 0 20px;
+    }
+    .icn-faq {
+        display: none;
+    }
+    .support-by {
+        width: 90%;
+    }
+}
+
+/* --- 5. MOBILE (Smartphone) (< 480px) --- */
+@media screen and (max-width: 480px) {
+    .text-pjj, .text-challenge {
+        font-size: 45px;
+    }
+    .content-banner {
+        gap: 100px;
+    }
+    .about, .events, .timeline, .faq, .recent-update {
+        height: auto;
+        padding-bottom: 50px;
+    }
+    .about h1, .events h1, .timeline h1, .faq h1, .recent-update h1 {
+        margin-top: 50px;
+        font-size: 28px;
+    }
+    .journey-text-highlight {
+        font-size: 40px;
+    }
+    .journey-card {
+        width: 100%;
+        height: auto;
+    }
+    .events-card-container {
+        max-width: 300px;
+    }
+    .card-timeline {
+        width: 280px;
+        height: auto;
+        padding: 20px;
+    }
+    .circle-card-timeline {
+        width: 150px;
+        height: 150px;
+    }
+    .static-carousel {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .side-card {
+        display: none; /* Show only main news on mobile */
+    }
+    .center-card {
+        width: 90%;
+        transform: scale(1);
+    }
+    .support-by-img-container {
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+    .support-by-img-container img {
+        width: 100px;
+    }
+    .footer {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+}

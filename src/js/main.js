@@ -4,49 +4,10 @@
  */
 
 document.addEventListener("DOMContentLoaded", function() {
-    loadAllComponents();
-});
-
-/**
- * Load all HTML components and initialize scripts after loading
- */
-async function loadAllComponents() {
-    const components = [
-        { id: 'header-component', path: 'components/header.html' },
-        { id: 'banner-component', path: 'components/banner.html' },
-        { id: 'about-component', path: 'components/about.html' },
-        { id: 'events-component', path: 'components/events.html' },
-        { id: 'timeline-component', path: 'components/timeline.html' },
-        { id: 'faq-component', path: 'components/faq.html' },
-        { id: 'update-component', path: 'components/update.html' },
-        { id: 'footer-component', path: 'components/footer.html' }
-    ];
-
-    // Load each component using fetch
-    const loadPromises = components.map(async (comp) => {
-        const element = document.getElementById(comp.id);
-        if (element) {
-            try {
-                const response = await fetch(comp.path);
-                if (response.ok) {
-                    const html = await response.text();
-                    element.innerHTML = html;
-                } else {
-                    console.error(`Failed to load ${comp.path}: ${response.statusText}`);
-                }
-            } catch (error) {
-                console.error(`Error fetching ${comp.path}:`, error);
-            }
-        }
-    });
-
-    // Wait for all components to be injected before initializing logic
-    await Promise.all(loadPromises);
-    
-    // Initialize components logic
+    // Initialize components logic directly
     initCarousel();
     initTimer();
-}
+});
 
 /**
  * Initialize Carousel for Events Section
@@ -68,14 +29,40 @@ function initCarousel() {
 }
 
 /**
- * Simple placeholder for timer initialization
+ * Initialize and start the countdown timer
  */
 function initTimer() {
     const timerElement = document.getElementById('timer');
-    if (timerElement) {
-        // You can add actual timer logic here if needed
-        console.log("Timer initialized");
-    }
+    if (!timerElement) return;
+
+    // Set the target date: June 17, 2026 00:00:00
+    const targetDate = new Date("June 17, 2026 00:00:00").getTime();
+
+    const updateTimer = () => {
+        const now = new Date().getTime();
+        const distance = targetDate - now;
+
+        if (distance < 0) {
+            timerElement.innerHTML = "00:00:00:00";
+            clearInterval(timerInterval);
+            return;
+        }
+
+        // Time calculations for days, hours, minutes and seconds
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        // Format with leading zeros
+        const format = (num) => num.toString().padStart(2, '0');
+
+        timerElement.innerHTML = `${format(days)}:${format(hours)}:${format(minutes)}:${format(seconds)}`;
+    };
+
+    // Run once immediately to avoid 1s delay
+    updateTimer();
+    const timerInterval = setInterval(updateTimer, 1000);
 }
 
 /**
@@ -95,6 +82,15 @@ window.moveSlide = function(index) {
     
     dots.forEach(dot => dot.classList.remove('active'));
     if (dots[index]) dots[index].classList.add('active');
+}
+/**
+ * Toggle Mobile Menu (Hamburger)
+ */
+window.toggleMobileMenu = function() {
+    const navMobile = document.getElementById('nav-mobile');
+    if (navMobile) {
+        navMobile.classList.toggle('active');
+    }
 }
 
 /**

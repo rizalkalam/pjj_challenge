@@ -24,13 +24,14 @@
     border-bottom: 1px solid rgba(255, 255, 255, 0.15);
     border-radius: 0px 0px 10px 0px;
 
-    display: flex;
-    justify-content: flex-end;
-    padding: 16px 20px;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr; /* Tiga bagian: Kiri, Tengah (Links), Kanan (Timer) */
     align-items: center;
+    padding: 16px 20px;
 }
 
 .navbar ul {
+    grid-column: 2; /* Memaksa links ke kolom tengah */
     display: flex;
     list-style: none;
     gap: 80px;
@@ -44,14 +45,33 @@
     font-weight: 300;
 }
 
+.hamburger {
+    display: none; /* Sembunyikan di desktop */
+    cursor: pointer;
+    color: #fff;
+}
+
+.mobile-close {
+    display: none; /* Sembunyikan di desktop */
+}
+
 .right-nav {
-    margin-left: 28%;
+    grid-column: 3; /* Memaksa timer ke kolom kanan */
+    justify-self: end; /* Rata kanan di dalam kolomnya */
     padding: 5px 16px;
     background-color: #E8FF42;
     color: #322098;
     border-radius: 10px;
+    min-width: 130px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
 }
 
 .right-nav p {
     font-weight: 800;
+    font-variant-numeric: tabular-nums; /* Memastikan lebar setiap angka sama */
+    text-align: center;
+    margin: 0;
 }

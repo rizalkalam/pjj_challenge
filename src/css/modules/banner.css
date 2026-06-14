@@ -6,6 +6,7 @@
     align-items: center;
     height: 90vh;
     overflow: hidden;
+    z-index: 0;
 }
 
 /* orbit */
