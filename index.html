@@ -30,7 +30,7 @@
                 <li><a href="#events" onclick="toggleMobileMenu()">Our Events</a></li>
                 <li><a href="#faq" onclick="toggleMobileMenu()">FAQ</a></li>
             </ul>
-            <div class="right-nav">
+            <div class="right-nav" style="visibility: hidden;">
                 <p id="timer">00:00:00:00</p>
             </div>
         </nav>
@@ -168,13 +168,24 @@
             <div class="carousel-wrapper">
                 <div class="events-list" id="eventTrack">
                     <div class="events-card-container">
+                        <img class="icn-events" src="src/assets/icons/brainchallange-icn.svg" alt="">
+                        <div class="events-card">
+                            <img class="neon-blur1" src="src/assets/graphics/neon-blur1.svg" alt="">
+                            <p>Brain Challenge Week</p>
+                            <div class="events-btn">
+                                <a class="btn-register" href="https://www.instagram.com/pjj.informatics.uii/">On Instagram!</a>
+                                <button class="btn-detail" onclick="openEventPopup('Brain Challange Week', 'Ambil momen terbaikmu dalam kompetisi fotografi digital ini. Tunjukkan kreativitasmu dalam menangkap esensi teknologi dan kemanusiaan.', 'https://www.instagram.com/pjj.informatics.uii/', 'https://bit.ly/Guidebook-BrainChallengeWeek')">Detail</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="events-card-container">
                         <img class="icn-events" src="src/assets/icons/catchmoment-icn.svg" alt="">
                         <div class="events-card">
                             <img class="neon-blur1" src="src/assets/graphics/neon-blur1.svg" alt="">
                             <p>Catch The Moment</p>
                             <div class="events-btn">
                                 <a class="btn-register" href="https://docs.google.com/forms/d/e/1FAIpQLScYjebvwhRCSILhY2_TCQU9msaihVs2Xsl8mgL8XJ-GZ4GkFg/viewform">Daftar Sekarang!</a>
-                                <button class="btn-detail" onclick="openEventPopup('Catch The Moment', 'Ambil momen terbaikmu dalam kompetisi fotografi digital ini. Tunjukkan kreativitasmu dalam menangkap esensi teknologi dan kemanusiaan.', 'https://docs.google.com/forms/d/e/1FAIpQLScYjebvwhRCSILhY2_TCQU9msaihVs2Xsl8mgL8XJ-GZ4GkFg/viewform')">Detail</button>
+                                <button class="btn-detail" onclick="openEventPopup('Catch The Moment', 'Ambil momen terbaikmu dalam kompetisi fotografi digital ini. Tunjukkan kreativitasmu dalam menangkap esensi teknologi dan kemanusiaan.', 'https://docs.google.com/forms/d/e/1FAIpQLScYjebvwhRCSILhY2_TCQU9msaihVs2Xsl8mgL8XJ-GZ4GkFg/viewform', 'https://bit.ly/Guidebook-CatchTheMoment')">Detail</button>
                             </div>
                         </div>
                     </div>
@@ -185,7 +196,7 @@
                             <p>Short Paper</p>
                             <div class="events-btn">
                                 <a class="btn-register" href="https://docs.google.com/forms/d/e/1FAIpQLScYjebvwhRCSILhY2_TCQU9msaihVs2Xsl8mgL8XJ-GZ4GkFg/viewform">Daftar Sekarang!</a>
-                                <button class="btn-detail" onclick="openEventPopup('Short Paper', 'Tuangkan pemikiran kritis dan solutifmu dalam bentuk karya tulis ilmiah pendek. Fokus pada inovasi teknologi informasi masa depan.', 'https://docs.google.com/forms/d/e/1FAIpQLScYjebvwhRCSILhY2_TCQU9msaihVs2Xsl8mgL8XJ-GZ4GkFg/viewform')">Detail</button>
+                                <button class="btn-detail" onclick="openEventPopup('Short Paper', 'Tuangkan pemikiran kritis dan solutifmu dalam bentuk karya tulis ilmiah pendek. Fokus pada inovasi teknologi informasi masa depan.', 'https://docs.google.com/forms/d/e/1FAIpQLScYjebvwhRCSILhY2_TCQU9msaihVs2Xsl8mgL8XJ-GZ4GkFg/viewform', 'https://bit.ly/Guidebook-ShortPaper')">Detail</button>
                             </div>
                         </div>
                     </div>
@@ -196,7 +207,7 @@
                             <p>Essay</p>
                             <div class="events-btn">
                                 <a class="btn-register" href="https://docs.google.com/forms/d/e/1FAIpQLScYjebvwhRCSILhY2_TCQU9msaihVs2Xsl8mgL8XJ-GZ4GkFg/viewform">Daftar Sekarang!</a>
-                                <button class="btn-detail" onclick="openEventPopup('Essay', 'Ekspresikan pandanganmu mengenai perkembangan dunia digital dan dampaknya bagi masyarakat melalui esai yang mendalam.', 'https://docs.google.com/forms/d/e/1FAIpQLScYjebvwhRCSILhY2_TCQU9msaihVs2Xsl8mgL8XJ-GZ4GkFg/viewform')">Detail</button>
+                                <button class="btn-detail" onclick="openEventPopup('Essay', 'Ekspresikan pandanganmu mengenai perkembangan dunia digital dan dampaknya bagi masyarakat melalui esai yang mendalam.', 'https://docs.google.com/forms/d/e/1FAIpQLScYjebvwhRCSILhY2_TCQU9msaihVs2Xsl8mgL8XJ-GZ4GkFg/viewform', 'https://bit.ly/Guidebook-Essay')">Detail</button>
                             </div>
                         </div>
                     </div>
@@ -218,7 +229,10 @@
                     <h2 id="popup-title">Event Title</h2>
                     <div class="popup-divider"></div>
                     <p id="popup-description">Event description goes here...</p>
-                    <a href="#" id="popup-reg-link" target="_blank" class="btn-register-popup">Daftar Sekarang</a>
+                    <div class="popup-action-buttons">
+                        <a href="#" id="popup-guidebook-link" target="_blank" class="btn-guidebook-popup">Guidebook</a>
+                        <a href="#" id="popup-reg-link" target="_blank" class="btn-register-popup">Daftar Sekarang</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -242,7 +256,7 @@
                 <!-- ... Repeat for other items ... -->
                  <div class="content-timeline-reverse">
                     <div class="card-timeline">
-                        <p>Tech Trivia Kilat</p>
+                        <p>Brain Challange Week</p>
                         <div class="circle-card-timeline"><img src="src/assets/graphics/neon-blur1.svg" alt=""></div>
                         <img class="icn-card-timeline-reverse" src="src/assets/icons/icn-rocket.svg" alt="">
                     </div>

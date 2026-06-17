@@ -87,28 +87,61 @@
     font-weight: 300;
 }
 
-.btn-register-popup {
-    margin-top: 10px;
-    background: #E8FF42;
-    color: #100B32;
-    border: none;
-    padding: 12px 40px;
+.popup-action-buttons {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 15px;
+}
+
+.btn-register-popup,
+.btn-guidebook-popup {
+    flex: 1;
+    max-width: 200px;
+    text-align: center;
+    padding: 12px 24px;
     border-radius: 30px;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 700;
     cursor: pointer;
     text-decoration: none;
-    display: inline-block;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    white-space: nowrap;
     transition: all 0.3s ease;
+}
+
+.btn-register-popup {
+    background: #E8FF42;
+    color: #100B32;
+    border: 2px solid #E8FF42;
 }
 
 .btn-register-popup:hover {
     background: #fff;
+    border-color: #fff;
     box-shadow: 0 0 25px rgba(232, 255, 66, 0.6);
     transform: translateY(-3px);
 }
 
-.btn-register-popup:active {
+.btn-guidebook-popup {
+    background: transparent;
+    color: #E8FF42;
+    border: 2px solid #E8FF42;
+}
+
+.btn-guidebook-popup:hover {
+    background: #E8FF42;
+    color: #100B32;
+    box-shadow: 0 0 25px rgba(232, 255, 66, 0.6);
+    transform: translateY(-3px);
+}
+
+.btn-register-popup:active,
+.btn-guidebook-popup:active {
     transform: translateY(0);
 }
 
@@ -146,8 +179,16 @@
         width: 32px;
         height: 32px;
     }
-    .btn-register-popup {
-        font-size: 16px;
-        padding: 10px 30px;
+    .popup-action-buttons {
+        flex-direction: column;
+        gap: 12px;
+        width: 100%;
+    }
+    .btn-register-popup,
+    .btn-guidebook-popup {
+        width: 100%;
+        max-width: none;
+        padding: 12px 20px;
+        font-size: 15px;
     }
 }

@@ -158,17 +158,31 @@ window.selectYear = function(year) {
 /**
  * Event Detail Popup Logic
  */
-window.openEventPopup = function(title, description, regLink) {
+window.openEventPopup = function(title, description, regLink, guidebookLink) {
     const popup = document.getElementById('event-popup');
     const titleEl = document.getElementById('popup-title');
     const descEl = document.getElementById('popup-description');
     const linkEl = document.getElementById('popup-reg-link');
+    const guideEl = document.getElementById('popup-guidebook-link');
     
     if (popup && titleEl && descEl) {
         titleEl.textContent = title;
         descEl.textContent = description;
-        if (linkEl && regLink) {
-            linkEl.href = regLink;
+        if (linkEl) {
+            if (regLink) {
+                linkEl.href = regLink;
+                linkEl.style.display = '';
+            } else {
+                linkEl.style.display = 'none';
+            }
+        }
+        if (guideEl) {
+            if (guidebookLink) {
+                guideEl.href = guidebookLink;
+                guideEl.style.display = '';
+            } else {
+                guideEl.style.display = 'none';
+            }
         }
         popup.style.display = 'flex';
         // Force reflow for transition

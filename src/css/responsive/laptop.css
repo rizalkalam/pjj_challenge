@@ -19,4 +19,22 @@
    .general-question{
         min-width: 55vh;
     }
+
+    .bg-pesawat {
+        position: absolute;
+        z-index: 1;
+        top: 200%; 
+        right: 80px;
+        pointer-events: none;
+    }
+}
+
+@media screen and (min-aspect-ratio: 16/10) {
+  .bg-pesawat {
+        position: absolute;
+        z-index: 1;
+        top: 135%; 
+        right: -170px;
+        pointer-events: none;
+    }
 }
