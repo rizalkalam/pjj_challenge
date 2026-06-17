@@ -1,0 +1,140 @@
+/* timeline */
+.timeline {
+    position: relative;
+    z-index: 2;
+    height: 95vh;
+    padding: 0px 0px;
+}
+
+.timeline h1 {
+    color: #E8FF42;
+    font-size: 36px;
+    font-weight: 800;
+    text-align: center;
+    margin-top: 30px;
+    text-shadow: 0 0 15px rgba(232, 255, 66, 0.6);
+}
+
+.container-timeline {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    margin-left: 40px;
+    gap: 26px;
+}
+
+.content-timeline {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+}
+
+.content-timeline-reverse {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+}
+
+.card-timeline {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    padding: 10px 18px;
+    width: 240px;
+    border-radius: 70px;
+    height: 346px;
+    background: linear-gradient(#547D22, #A3B32E, #E8FF42);
+}
+
+.card-timeline p {
+    font-size: 24px;
+    font-weight: 500;
+    color: #fff;
+    text-align: center;
+    line-height: 26px;
+}
+
+.circle-card-timeline {
+    position: relative;
+    background-color: #fff;
+    border-radius: 100%;
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+.circle-card-timeline img {
+    position: absolute;
+    width: 150%;
+    top: -15%;
+    left: -50px;
+}
+
+.icn-card-timeline {
+    position: absolute;
+    z-index: 1;
+    top: 29%;
+}
+
+.icn-card-timeline-reverse {
+    position: absolute;
+    z-index: 1;
+    top: 63%;
+}
+
+.line-timeline {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -70px;
+}
+
+.line-timeline-reverse {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.line-timeline img, .line-timeline-reverse img {
+    width: 110%;
+}
+
+.line-dot {
+    margin-top: -9px;
+    border-radius: 100%;
+    width: 16px;
+    height: 16px;
+    background-color: #fff;
+}
+
+.line-dot-reverse {
+    margin-top: -94px;
+    border-radius: 100%;
+    width: 16px;
+    height: 16px;
+    background-color: #fff;
+}
+
+.date-legend {
+    background-color: #fff;
+    padding: 5px 12px;
+    border-radius: 16px;
+}
+
+.date-legend p {
+    color: #A3B32E;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.fill-card-timeline {
+    height: 150px;
+}

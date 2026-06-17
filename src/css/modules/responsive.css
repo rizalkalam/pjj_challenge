@@ -1,0 +1,10 @@
+/* 
+   Responsive Stylesheet - PJJ Challenge
+   Modular Clean Architecture
+*/
+
+@import '../responsive/large-desktop.css';
+@import '../responsive/laptop.css';
+@import '../responsive/tablet.css';
+@import '../responsive/mobile-large.css';
+@import '../responsive/mobile.css';

@@ -1,0 +1,160 @@
+/* event */
+.events {
+    position: relative;
+    z-index: 2;
+    height: 90vh;
+    padding: 0px 0px;
+}
+
+.events h1 {
+    color: #E8FF42;
+    font-size: 36px;
+    font-weight: 800;
+    text-align: center;
+    margin-top: 30px;
+    text-shadow: 0 0 15px rgba(232, 255, 66, 0.6);
+}
+
+.events-list {
+    display: flex;
+    justify-content: space-between;
+    gap: 28px;
+    margin-top: 100px;
+}
+
+.events-card-container {
+    position: relative;
+}
+
+.icn-events {
+    position: absolute;
+    z-index: 1;
+    top: -28%;
+    left: 50px;
+}
+
+.events-card {
+    position: relative;
+    z-index: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(8px);
+    border: 1.8px solid rgba(255, 255, 255, 1);
+    border-radius: 20px;
+}
+
+.neon-blur1 {
+    margin-top: -170px;
+    width: 130%;
+}
+
+.events-card p {
+    font-size: 28px;
+    text-align: center;
+    color: #B5CE00;
+    margin-top: -50px;
+}
+
+.events-btn {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    margin-top: 18px;
+    margin-bottom: 28px;
+}
+
+.btn-register {
+    background-color: #CBE600;
+    padding: 10px 28px;
+    border-radius: 12px;
+    border: none;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-register:hover {
+    background-color: #E8FF42;
+    box-shadow: 0 0 20px rgba(232, 255, 66, 0.5);
+    transform: translateY(-2px);
+}
+
+.btn-register:active {
+    transform: translateY(0);
+}
+
+.btn-detail {
+    background-color: #fff;
+    padding: 10px 32px;
+    border-radius: 12px;
+    border: none;
+    color: #CBE600;
+    font-size: 18px;
+    font-weight: 400;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-detail:hover {
+    background-color: #E8FF42;
+    color: #100B32;
+    box-shadow: 0 0 15px rgba(232, 255, 66, 0.4);
+    transform: translateY(-2px);
+}
+
+.btn-detail:active {
+    transform: translateY(0);
+}
+
+/* CSS CAROUSEL */
+.carousel-wrapper {
+    width: 100%;
+    overflow: hidden;
+    padding-top: 100px; 
+    padding-bottom: 20px;
+}
+
+.events-list {
+    margin-top: 0; 
+    justify-content: flex-start; 
+    flex-wrap: nowrap;
+    transition: transform 0.5s ease-in-out;
+}
+
+.events-card-container {
+    position: relative;
+    max-width: 420px; 
+    flex: 0 0 auto;
+}
+
+/* titik (dot) indikator */
+.carousel-indicators {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.dot.active {
+    background-color: #E8FF42;
+    width: 32px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(232, 255, 66, 0.6);
+}

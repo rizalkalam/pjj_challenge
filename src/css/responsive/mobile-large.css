@@ -1,0 +1,106 @@
+/* --- 4. LARGE MOBILE / SMALL TABLET (481px - 768px) --- */
+@media screen and (max-width: 768px) {
+    .logo {
+        width: 128px; 
+        z-index: 11; /* Naikkan z-index agar di atas navbar */
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .navbar {
+        display: flex;
+        justify-content: flex-end; 
+        padding: 0px 15px;
+        gap: 15px;
+        z-index: 10; 
+    }
+
+    .hamburger {
+        display: flex; /* Gunakan flex untuk center icon */
+        align-items: center;
+        justify-content: center;
+        order: 2; /* Setelah timer */
+        z-index: 14;
+    }
+
+    .right-nav {
+        order: 1; /* Sebelum hamburger */
+        min-width: 100px;
+        font-size: 14px;
+        padding: 4px 10px;
+    }
+
+    .nav-links {
+        display: none;
+        visibility: hidden;
+    }
+
+    .nav-mobile.active {
+        display: flex;
+        visibility: visible;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+        width: 100%;
+        transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        margin-top: -20px;
+        padding: 40px 20px 20px 40px;
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(12px);
+        border-radius: 0px 0px 18px 18px;
+        position: absolute;
+        z-index: 9;
+        list-style: none;
+    }
+
+     .nav-mobile{
+        display: none;
+        visibility: hidden;
+    }
+
+    .nav-mobile a {
+        color: #fff;
+        text-decoration: none;
+    }
+
+    .text-pjj, .text-challenge {
+        font-size: 60px;
+    }
+    .text-challenge {
+        margin-top: -20px;
+    }
+    .layer-orbit {
+        display: none; /* Hide complex orbits on smaller screens */
+    }
+    .content-about {
+        margin: 30px 20px;
+    }
+    .journey-header {
+        flex-direction: column;
+        text-align: center;
+        padding: 0 20px;
+    }
+    .journey-title-2 {
+        font-size: 40px;
+    }
+    .right-journey-content {
+        flex-wrap: wrap;
+    }
+    .container-timeline {
+        flex-direction: column;
+        align-items: center;
+    }
+    .container-faq {
+        flex-direction: column;
+        align-items: center;
+        padding: 0 20px;
+    }
+    .icn-faq {
+        display: none;
+    }
+    .support-by {
+        width: 90%;
+    }
+}

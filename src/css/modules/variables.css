@@ -1,0 +1,22 @@
+:root {
+    /* Colors */
+    --color-primary: #100B32;
+    --color-secondary: #322098;
+    --color-accent: #E8FF42;
+    --color-accent-hover: #CBE600;
+    --color-text-light: #ffffff;
+    --color-text-muted: #939393;
+    --color-neon-glow: rgba(232, 255, 66, 0.6);
+    
+    /* Glassmorphism */
+    --glass-bg: rgba(255, 255, 255, 0.1);
+    --glass-border: rgba(255, 255, 255, 0.15);
+    --glass-blur: blur(12px);
+
+    /* Fonts */
+    --font-main: "Poppins", sans-serif;
+    
+    /* Transitions */
+    --transition-fast: 0.3s ease;
+    --transition-normal: 0.5s ease-in-out;
+}

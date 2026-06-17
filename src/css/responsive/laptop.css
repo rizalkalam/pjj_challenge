@@ -1,0 +1,40 @@
+/* --- 2. LAPTOP / SMALL DESKTOP (1025px - 1440px) --- */
+@media screen and (max-width: 1200px) {
+    .nav-mobile{
+        display: none;
+        visibility: hidden;
+    }
+    .content-about {
+        margin: 30px 100px;
+    }
+    .right-journey-content {
+        gap: 12px;
+    }
+    .journey-card {
+        width: 220px;
+    }
+    .participant-info p {
+        font-size: 16px;
+    }
+   .general-question{
+        min-width: 55vh;
+    }
+
+    .bg-pesawat {
+        position: absolute;
+        z-index: 1;
+        top: 200%; 
+        right: 80px;
+        pointer-events: none;
+    }
+}
+
+@media screen and (min-aspect-ratio: 16/10) {
+  .bg-pesawat {
+        position: absolute;
+        z-index: 1;
+        top: 135%; 
+        right: -170px;
+        pointer-events: none;
+    }
+}

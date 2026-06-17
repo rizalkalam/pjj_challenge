@@ -4,135 +4,354 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PJJ - Challenge</title>
-    <link rel="stylesheet" href="style.css">
+    <!-- CSS Modular System -->
+    <link rel="stylesheet" href="src/css/style.css">
+    <!-- Icon Library -->
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
 </head>
 <body>
+    
+    <!-- ==========================================
+         1. HEADER & NAVIGATION
+         ========================================== -->
     <header class="header">
         <div class="logo">
-            <img src="assets/logo.svg" alt="">
+            <img src="src/assets/icons/logo.svg" alt="PJJ Challenge Logo">
         </div>
         <nav class="navbar">
-            <ul class="nav-links">
-                <li><a href="#home">About Us</a></li>
-                <li><a href="#about">Our Events</a></li>
-                <li><a href="#contact">FAQ</a></li>
+            <div class="hamburger" onclick="toggleMobileMenu()">
+                <iconify-icon icon="line-md:menu" width="32" id="menu-icon"></iconify-icon>
+            </div>
+            <ul class="nav-links" id="nav-links">
+                <li class="mobile-close" onclick="toggleMobileMenu()">
+                    <iconify-icon icon="line-md:close" width="32"></iconify-icon>
+                </li>
+                <li><a href="#about" onclick="toggleMobileMenu()">About Us</a></li>
+                <li><a href="#events" onclick="toggleMobileMenu()">Our Events</a></li>
+                <li><a href="#faq" onclick="toggleMobileMenu()">FAQ</a></li>
             </ul>
-            <div class="right-nav">
-                <p>00:00:00</p>
+            <div class="right-nav" style="visibility: hidden;">
+                <p id="timer">00:00:00:00</p>
             </div>
         </nav>
+            <ul class="nav-mobile" id="nav-mobile">
+                <li><a href="#about" onclick="toggleMobileMenu()">About Us</a></li>
+                <li><a href="#events" onclick="toggleMobileMenu()">Our Events</a></li>
+                <li><a href="#faq" onclick="toggleMobileMenu()">FAQ</a></li>
+            </ul>
     </header>
+
     <main>
-        <div class="banner">
+        <!-- ==========================================
+             2. HERO BANNER
+             ========================================== -->
+        <section id="home" class="banner">
             <div class="content-banner">
                 <h1 class="layer-text">
                     <span class="text-pjj">PJJ</span>
                     <span class="text-challenge">CHALLENGE</span>
                 </h1>
                 <div class="scroll">
-                    <img src="assets/scroll-icn.svg" alt="">
+                    <img src="src/assets/icons/scroll-icn.svg" alt="Scroll icon">
                     <p>Scroll More</p>
                 </div>
             </div>
             <div class="layer-orbit">
-                <div class="abstract-icon-1">
-                    <img src="assets/brain-assets.svg" alt="">
-                </div>
-                <div class="abstract-icon-2">
-                    <img src="assets/article-icn.svg" alt="">
-                </div>
-                <div class="abstract-icon-3">
-                    <img src="assets/poster-icn.svg" alt="">
-                </div>
+                <div class="abstract-icon-1"><img src="src/assets/graphics/brain-assets.svg" alt=""></div>
+                <div class="abstract-icon-2"><img src="src/assets/graphics/article-icn.svg" alt=""></div>
+                <div class="abstract-icon-3"><img src="src/assets/graphics/poster-icn.svg" alt=""></div>
             </div>
-            <img class="aksen-circle" src="assets/circle-blurr-ungu.svg" alt="" srcset="">
-            <img class="aksen-squareline" src="assets/aksen-square.svg" alt="">
-            <img class="bg-banner" src="assets/fti-bg.png" alt="">
-        </div>
+            <img class="aksen-circle" src="src/assets/graphics/circle-blurr-ungu.svg" alt="">
+            <img class="aksen-squareline" src="src/assets/graphics/aksen-square.svg" alt="">
+            <img class="bg-banner" src="src/assets/images/fti-bg.png" alt="">
+        </section>
+
         <div class="divider">
-            <img src="assets/aksen-1.svg" alt="">
+            <img src="src/assets/graphics/aksen-1.svg" alt="">
         </div>
 
-        <!-- section about -->
-        <div class="about">
+        <!-- ==========================================
+             3. ABOUT US
+             ========================================== -->
+        <section id="about" class="about">
             <h1>About Us</h1>
-            <div class="content-about">
+            <article class="content-about">
                 <p>PJJ Challenge adalah kompetisi digital nasional yang diinisiasi oleh Program Studi Informatika Program Pendidikan Jarak Jauh (PJJ) Universitas Islam Indonesia (UII). Kami hadir sebagai wadah inklusif bagi talenta kreatif dan pemikir kritis di seluruh Indonesia untuk menguji logika, mengasah kreativitas visual, dan menuangkan solusi teknologi tanpa sekat jarak fisik.</p>
-            </div>
+            </article>
+            
             <div class="journey">
-                <div class="journey-header">
+                <header class="journey-header">
                     <div class="journey-title">
                         <p class="journey-title-1">Our Journey</p>
                         <p class="journey-title-2">Year Over Year</p>
                     </div>
-                    <div class="journey-year-selection">
-                        <div class="journey-year">
-                            <p>2025</p>
+                    <div class="journey-year-selection" id="journey-year-dropdown">
+                        <div class="journey-year-display">
+                            <p id="display-year">2025</p>
+                            <!-- List opsi yang muncul di bawah -->
+                            <ul class="year-options-list" id="year-options">
+                                <li onclick="selectYear('2025')">2025</li>
+                                <!-- Tambahkan tahun lain di sini -->
+                            </ul>
                         </div>
-                        <div class="dropdown">
-                            <img src="assets/icon_down.svg" alt="">
+                        <div class="year-select-trigger" onclick="toggleYearDropdown()">
+                            <div class="dropdown-icon-box">
+                                <img src="src/assets/icons/icon_down.svg" alt="" id="dropdown-icon">
+                            </div>
                         </div>
                     </div>
-                </div>
+                </header>
+                
                 <div class="journey-content">
                     <div class="left-journey-content">
                         <div class="journey-bg">
-                            <img class="journey-bg-1" src="assets/data-assets.svg" alt="">
-                            <img class="journey-bg-2" src="assets/trophy-assets.svg" alt="">
+                            <img class="journey-bg-1" src="src/assets/graphics/data-assets.svg" alt="">
+                            <img class="journey-bg-2" src="src/assets/graphics/trophy-assets.svg" alt="">
                         </div>
                         <div class="text-participant">
-                            <div class="">
-                                <p class="journey-text-highlight">375+</p>
+                            <div>
+                                <p class="journey-text-highlight">900+</p>
                                 <p class="journey-text-dsc">Total Peserta</p>
                             </div>
-                            <div class="spacing">
-
-                            </div>
+                            <div class="spacing"></div>
                         </div>
                         <div class="text-prize">
-                            <div class="spacing">
-
-                            </div>
-                            <div class="">
+                            <div class="spacing"></div>
+                            <div>
                                 <p class="journey-text-dsc-left">Total Hadiah</p>
-                                <p class="journey-text-highlight">Rp40+</p>
+                                <p class="journey-text-highlight">Rp15+</p>
                                 <p class="journey-text-dsc-right">Juta</p>
                             </div>
                         </div>
                     </div>
+                    
                     <div class="right-journey-content">
+                        <!-- Journey Cards -->
                         <div class="journey-card">
-                            <img class="journey-card-img" src="assets/brain-icn.svg" alt="">
-                            <p>Daily Brain Challenge</p>
+                            <img class="journey-card-img" src="src/assets/icons/brain-icn.svg" alt="">
+                            <p class="title-event-journey">Brain Challenge Week</p>
                             <div class="participant-info">
-                                <img src="assets/majesticons_user.svg" alt="">
+                                <img src="src/assets/icons/majesticons_user.svg" alt="">
                                 <p>150 Peserta</p>
                             </div>
                         </div>
                         <div class="journey-card">
-                            <img class="journey-card-img" src="assets/brain-icn.svg" alt="">
-                            <p>Daily Brain Challenge</p>
+                            <img class="journey-card-img" src="src/assets/icons/essay-icn-small.svg" alt="">
+                            <p class="title-event-journey">Esai</p>
                             <div class="participant-info">
-                                <img src="assets/majesticons_user.svg" alt="">
-                                <p>150 Peserta</p>
+                                <img src="src/assets/icons/majesticons_user.svg" alt="">
+                                <p>468 Peserta</p>
                             </div>
                         </div>
                         <div class="journey-card">
-                            <img class="journey-card-img" src="assets/brain-icn.svg" alt="">
-                            <p>Daily Brain Challenge</p>
+                            <img class="journey-card-img" src="src/assets/icons/poster-icn.svg" alt="">
+                            <p class="title-event-journey">Poster</p>
                             <div class="participant-info">
-                                <img src="assets/majesticons_user.svg" alt="">
-                                <p>150 Peserta</p>
+                                <img src="src/assets/icons/majesticons_user.svg" alt="">
+                                <p>227 Peserta</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <!-- section about -->
+        </section>
 
-        <!-- section our events -->
-        <!-- section our events -->
+        <div class="bg-pesawat">
+            <img src="src/assets/graphics/aksen-pesawat.svg" alt="">
+        </div>
+
+        <!-- ==========================================
+             4. OUR EVENTS
+             ========================================== -->
+        <section id="events" class="events">
+            <h1>Our Events</h1>
+            <div class="carousel-wrapper">
+                <div class="events-list" id="eventTrack">
+                    <div class="events-card-container">
+                        <img class="icn-events" src="src/assets/icons/brainchallange-icn.svg" alt="">
+                        <div class="events-card">
+                            <img class="neon-blur1" src="src/assets/graphics/neon-blur1.svg" alt="">
+                            <p>Brain Challenge Week</p>
+                            <div class="events-btn">
+                                <a class="btn-register" href="https://www.instagram.com/pjj.informatics.uii/">On Instagram!</a>
+                                <button class="btn-detail" onclick="openEventPopup('Brain Challenge Week', 'Asah ketajaman logika dan wawasan teknologimu lewat tantangan kuis harian interaktif di Instagram! Jawab cepat, kumpulkan poin tertinggi, dan menangkan hadiah menarik setiap harinya.', 'https://www.instagram.com/pjj.informatics.uii/', 'https://bit.ly/Guidebook-BrainChallengeWeek')">Detail</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="events-card-container">
+                        <img class="icn-events" src="src/assets/icons/catchmoment-icn.svg" alt="">
+                        <div class="events-card">
+                            <img class="neon-blur1" src="src/assets/graphics/neon-blur1.svg" alt="">
+                            <p>Catch The Moment</p>
+                            <div class="events-btn">
+                                <a class="btn-register" href="https://docs.google.com/forms/d/e/1FAIpQLScYjebvwhRCSILhY2_TCQU9msaihVs2Xsl8mgL8XJ-GZ4GkFg/viewform">Daftar Sekarang!</a>
+                                <button class="btn-detail" onclick="openEventPopup('Catch The Moment', 'Ambil momen terbaikmu dalam kompetisi fotografi digital ini. Tunjukkan kreativitasmu dalam menangkap esensi teknologi dan kemanusiaan.', 'https://docs.google.com/forms/d/e/1FAIpQLScYjebvwhRCSILhY2_TCQU9msaihVs2Xsl8mgL8XJ-GZ4GkFg/viewform', 'https://bit.ly/Guidebook-CatchTheMoment')">Detail</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="events-card-container">
+                        <img class="icn-events" src="src/assets/icons/spaper-icn.svg" alt="">
+                        <div class="events-card">
+                            <img class="neon-blur1" src="src/assets/graphics/neon-blur1.svg" alt="">
+                            <p>Short Paper</p>
+                            <div class="events-btn">
+                                <a class="btn-register" href="https://docs.google.com/forms/d/e/1FAIpQLScYjebvwhRCSILhY2_TCQU9msaihVs2Xsl8mgL8XJ-GZ4GkFg/viewform">Daftar Sekarang!</a>
+                                <button class="btn-detail" onclick="openEventPopup('Short Paper', 'Tuangkan pemikiran kritis dan solutifmu dalam bentuk karya tulis ilmiah pendek. Fokus pada inovasi teknologi informasi masa depan.', 'https://docs.google.com/forms/d/e/1FAIpQLScYjebvwhRCSILhY2_TCQU9msaihVs2Xsl8mgL8XJ-GZ4GkFg/viewform', 'https://bit.ly/Guidebook-ShortPaper')">Detail</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="events-card-container">
+                        <img class="icn-events" src="src/assets/icons/essay-icn.svg" alt="">
+                        <div class="events-card">
+                            <img class="neon-blur1" src="src/assets/graphics/neon-blur1.svg" alt="">
+                            <p>Essay</p>
+                            <div class="events-btn">
+                                <a class="btn-register" href="https://docs.google.com/forms/d/e/1FAIpQLScYjebvwhRCSILhY2_TCQU9msaihVs2Xsl8mgL8XJ-GZ4GkFg/viewform">Daftar Sekarang!</a>
+                                <button class="btn-detail" onclick="openEventPopup('Essay', 'Ekspresikan pandanganmu mengenai perkembangan dunia digital dan dampaknya bagi masyarakat melalui esai yang mendalam.', 'https://docs.google.com/forms/d/e/1FAIpQLScYjebvwhRCSILhY2_TCQU9msaihVs2Xsl8mgL8XJ-GZ4GkFg/viewform', 'https://bit.ly/Guidebook-Essay')">Detail</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-indicators">
+                <span class="dot active" onclick="moveSlide(0)"></span>
+                <span class="dot" onclick="moveSlide(1)"></span>
+            </div>
+        </section>
+
+        <!-- Event Detail Popup Overlay -->
+        <div id="event-popup" class="popup-overlay" onclick="closeEventPopup(event)">
+            <div class="popup-content" onclick="event.stopPropagation()">
+                <button class="popup-close" onclick="closeEventPopup()">
+                    <iconify-icon icon="line-md:close" width="24"></iconify-icon>
+                </button>
+                <div class="popup-body">
+                    <h2 id="popup-title">Event Title</h2>
+                    <div class="popup-divider"></div>
+                    <p id="popup-description">Event description goes here...</p>
+                    <div class="popup-action-buttons">
+                        <a href="#" id="popup-guidebook-link" target="_blank" class="btn-guidebook-popup">Guidebook</a>
+                        <a href="#" id="popup-reg-link" target="_blank" class="btn-register-popup">Daftar Sekarang</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ==========================================
+             5. TIMELINE
+             ========================================== -->
+        <section id="timeline" class="timeline">
+            <h1>Timeline</h1>
+            <div class="container-timeline">
+                <div class="content-timeline">
+                    <div class="card-timeline">
+                        <p>Pendaftaran & Pengumpulan Karya</p>
+                        <div class="circle-card-timeline"><img src="src/assets/graphics/neon-blur1.svg" alt=""></div>
+                        <img class="icn-card-timeline" src="src/assets/icons/icn-file.svg" alt="">
+                    </div>
+                    <div class="line-timeline"><img src="src/assets/graphics/line-below.svg" alt=""><div class="line-dot"></div></div>
+                    <div class="date-legend"><p>17 - 28 Juni 2026</p></div>
+                    <div class="fill-card-timeline"></div>
+                </div>
+                <!-- ... Repeat for other items ... -->
+                 <div class="content-timeline-reverse">
+                    <div class="card-timeline">
+                        <p>Brain Challenge Week</p>
+                        <div class="circle-card-timeline"><img src="src/assets/graphics/neon-blur1.svg" alt=""></div>
+                        <img class="icn-card-timeline-reverse" src="src/assets/icons/icn-rocket.svg" alt="">
+                    </div>
+                    <div class="line-timeline-reverse"><img src="src/assets/graphics/line-above.svg" alt=""><div class="line-dot-reverse"></div></div>
+                    <div class="date-legend"><p>22 - 28 Juni 2026</p></div>
+                    <div class="fill-card-timeline"></div>
+                </div>
+                <div class="content-timeline">
+                    <div class="card-timeline">
+                        <p>Penilaian Dewan Juri</p>
+                        <div class="circle-card-timeline"><img src="src/assets/graphics/neon-blur1.svg" alt=""></div>
+                        <img class="icn-card-timeline" src="src/assets/icons/icn-assesment.svg" alt="">
+                    </div>
+                    <div class="line-timeline"><img src="src/assets/graphics/line-below.svg" alt=""><div class="line-dot"></div></div>
+                    <div class="date-legend"><p>29 - 2 Juli 2026</p></div>
+                    <div class="fill-card-timeline"></div>
+                </div>
+                <div class="content-timeline-reverse">
+                    <div class="card-timeline">
+                        <p>Pengumuman (Live)</p>
+                        <div class="circle-card-timeline"><img src="src/assets/graphics/neon-blur1.svg" alt=""></div>
+                        <img class="icn-card-timeline-reverse" src="src/assets/icons/icn-toa.svg" alt="">
+                    </div>
+                    <div class="line-timeline-reverse"><img src="src/assets/graphics/line-above.svg" alt=""><div class="line-dot-reverse"></div></div>
+                    <div class="date-legend"><p>3 Juli 2026</p></div>
+                    <div class="fill-card-timeline"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================
+             6. FAQ
+             ========================================== -->
+        <section id="faq" class="faq">
+            <h1>Frequently Asked Questions</h1>
+            <div class="container-faq">
+                <div class="icn-faq"><img src="src/assets/icons/icn-faq.svg" alt=""></div>
+                <div class="general-question">
+                    <div class="card-faq" onclick="toggleFAQ(this)">
+                        <div class="question">Siapa saja yang bisa mengikuti PJJ Challenge dan berapa biaya pendaftarannya?<span class="icon-faq"><iconify-icon icon="line-md:chevron-small-down" style="color: #797979" width="30"></iconify-icon></span></div>
+                        <div class="text-faq"><p>PJJ Challenge TERBUKA UNTUK UMUM dan TANPA BATASAN USIA! Siapa pun kamu, baik pelajar, mahasiswa, maupun profesional, semuanya bisa ikut seru-seruan di sini. Yang paling penting, seluruh rangkaian kompetisi ini 100% GRATIS tanpa dipungut biaya pendaftaran sepeser pun.</p></div>
+                    </div>
+                    <div class="card-faq" onclick="toggleFAQ(this)">
+                        <div class="question">Ada kategori lomba apa saja di PJJ Challenge 2026?<span class="icon-faq"><iconify-icon icon="line-md:chevron-small-down" style="color: #797979" width="30"></iconify-icon></span></div>
+                        <div class="text-faq"><p>Catch The Moment, Short Paper, Essay</p></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================
+             7. RECENT UPDATE
+             ========================================== -->
+        <section id="news" class="recent-update">
+            <h1>Recent Update</h1>
+            <div class="static-carousel">
+                <div class="card side-card"><img src="src/assets/images/news1.png" alt=""></div>
+                <div class="card center-card"><img src="src/assets/images/news3.png" alt=""></div>
+                <div class="card side-card"><img src="src/assets/images/news2.png" alt=""></div>
+            </div>
+        </section>
+
+        <!-- ==========================================
+             8. SUPPORT & FOOTER
+             ========================================== -->
+        <section id="support" class="support">
+            <div class="support-wrapper">
+                <div class="container-support">
+                    <div class="organized-by">
+                        <div class="organized-by-text"><p>Organized by</p><img src="src/assets/graphics/container-organized-by.svg" alt=""></div>
+                        <img class="pjj-logo" src="src/assets/icons/pjj-icn.svg" alt="">
+                    </div>
+                    <div class="support-by">
+                        <p>Support by</p>
+                        <div class="support-by-img-container">
+                            <img src="src/assets/icons/UII_LOGO.svg" alt="">
+                            <img src="src/assets/icons/infor.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="contact">
+                    <div class="contact-content"><img src="src/assets/icons/icn-phone.svg" alt=""><p>Contact: +6285155370503</p></div>
+                    <img class="contact-wrapper" src="src/assets/graphics/contact-wrapper.svg" alt="">
+                </div>
+            </div>
+            <img class="bg-footer" src="src/assets/graphics/gradient-footer.svg" alt="">
+        </section>
+
+        <footer class="footer">
+            <div class="ig-wrapper"><img src="src/assets/icons/icn_ig.svg" alt=""><p>@pjj.informatics.uii</p></div>
+            <div class="web-wrapper"><img src="src/assets/icons/icn_web.svg" alt=""><p>informatics.uii.ac.id/pjj</p></div>
+        </footer>
     </main>
+
+    <!-- JavaScript External -->
+    <script src="src/js/main.js"></script>
 </body>
 </html>

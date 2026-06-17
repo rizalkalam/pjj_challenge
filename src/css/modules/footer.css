@@ -1,0 +1,22 @@
+/* footer */
+.footer {
+    position: relative;
+    z-index: 1;
+    background-color: #100B32;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    padding: 28px;
+}
+
+.ig-wrapper, .web-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.ig-wrapper p, .web-wrapper p {
+    color: #fff;
+}

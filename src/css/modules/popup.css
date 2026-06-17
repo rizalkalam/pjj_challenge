@@ -1,0 +1,194 @@
+/* Popup Styles */
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(16, 11, 50, 0.8);
+    backdrop-filter: blur(10px);
+    display: none; /* Sembunyikan secara default */
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.popup-overlay.active {
+    display: flex;
+    opacity: 1;
+}
+
+.popup-content {
+    background: #322098;
+    border: 1px solid #E8FF42;
+    border-radius: 36px;
+    width: 90%;
+    max-width: 600px;
+    padding: 40px;
+    position: relative;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+    transform: scale(0.8);
+    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.popup-overlay.active .popup-content {
+    transform: scale(1);
+}
+
+.popup-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: #E8FF42;
+    border: none;
+    border-radius: 100%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    color: #100B32;
+    transition: all 0.3s ease;
+}
+
+.popup-close:hover {
+    transform: rotate(90deg);
+    background: #fff;
+}
+
+.popup-body {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.popup-body h2 {
+    color: #E8FF42;
+    font-size: 32px;
+    font-weight: 800;
+}
+
+.popup-divider {
+    width: 60px;
+    height: 4px;
+    background: #E8FF42;
+    border-radius: 2px;
+}
+
+.popup-body p {
+    color: #fff;
+    font-size: 18px;
+    line-height: 1.6;
+    font-weight: 300;
+}
+
+.popup-action-buttons {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 15px;
+}
+
+.btn-register-popup,
+.btn-guidebook-popup {
+    flex: 1;
+    max-width: 200px;
+    text-align: center;
+    padding: 12px 24px;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    white-space: nowrap;
+    transition: all 0.3s ease;
+}
+
+.btn-register-popup {
+    background: #E8FF42;
+    color: #100B32;
+    border: 2px solid #E8FF42;
+}
+
+.btn-register-popup:hover {
+    background: #fff;
+    border-color: #fff;
+    box-shadow: 0 0 25px rgba(232, 255, 66, 0.6);
+    transform: translateY(-3px);
+}
+
+.btn-guidebook-popup {
+    background: transparent;
+    color: #E8FF42;
+    border: 2px solid #E8FF42;
+}
+
+.btn-guidebook-popup:hover {
+    background: #E8FF42;
+    color: #100B32;
+    box-shadow: 0 0 25px rgba(232, 255, 66, 0.6);
+    transform: translateY(-3px);
+}
+
+.btn-register-popup:active,
+.btn-guidebook-popup:active {
+    transform: translateY(0);
+}
+
+/* Tablet Scaling */
+@media screen and (max-width: 1024px) {
+    .popup-content {
+        max-width: 500px;
+        padding: 30px;
+        border-radius: 28px;
+    }
+    .popup-body h2 {
+        font-size: 28px;
+    }
+    .popup-body p {
+        font-size: 16px;
+    }
+}
+
+/* Mobile Scaling */
+@media screen and (max-width: 480px) {
+    .popup-content {
+        width: 85%;
+        padding: 40px 20px;
+        border-radius: 24px;
+    }
+    .popup-body h2 {
+        font-size: 24px;
+    }
+    .popup-body p {
+        font-size: 14px;
+    }
+    .popup-close {
+        top: 15px;
+        right: 15px;
+        width: 32px;
+        height: 32px;
+    }
+    .popup-action-buttons {
+        flex-direction: column;
+        gap: 12px;
+        width: 100%;
+    }
+    .btn-register-popup,
+    .btn-guidebook-popup {
+        width: 100%;
+        max-width: none;
+        padding: 12px 20px;
+        font-size: 15px;
+    }
+}
