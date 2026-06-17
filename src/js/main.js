@@ -172,6 +172,11 @@ window.openEventPopup = function(title, description, regLink, guidebookLink) {
             if (regLink) {
                 linkEl.href = regLink;
                 linkEl.style.display = '';
+                if (regLink.includes('instagram.com')) {
+                    linkEl.textContent = 'Kunjungi Instagram';
+                } else {
+                    linkEl.textContent = 'Daftar Sekarang';
+                }
             } else {
                 linkEl.style.display = 'none';
             }
