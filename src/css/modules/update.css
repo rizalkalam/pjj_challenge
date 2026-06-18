@@ -37,6 +37,7 @@
   backdrop-filter: blur(10px);
   color: #fff;
   transition: all 0.4s ease; 
+  text-decoration: none;
 }
 
 /* --- KARTU SAMPING (KIRI & KANAN) --- */
