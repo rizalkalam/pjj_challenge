@@ -108,17 +108,41 @@
     border-radius: 100px;
     max-width: 190px;
     padding: 5px 22px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.scroll:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(232, 255, 66, 0.4);
+    box-shadow: 0 0 20px rgba(232, 255, 66, 0.15);
+    transform: translateY(-3px);
+}
+
+.scroll:hover img {
+    animation: bounceDown 1s ease-in-out infinite;
+}
+
+@keyframes bounceDown {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(5px); }
 }
 
 .scroll img {
     width: 35px;
     height: 35px;
+    transition: transform 0.3s ease;
 }
 
 .scroll p {
     color: #fff;
     font-size: 16px;
     font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.scroll:hover p {
+    color: #E8FF42;
 }
 
 /* divider */

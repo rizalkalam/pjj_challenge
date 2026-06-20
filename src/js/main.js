@@ -10,6 +10,16 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 /**
+ * Scroll to About section (called from "Scroll More" button in hero banner)
+ */
+window.scrollToAbout = function() {
+    const aboutSection = document.getElementById('about');
+    if (aboutSection) {
+        aboutSection.scrollIntoView({ behavior: 'smooth' });
+    }
+}
+
+/**
  * Initialize Carousel for Events Section
  */
 function initCarousel() {
