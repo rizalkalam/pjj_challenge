@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,8 +11,9 @@
     <!-- Icon Library -->
     <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
 </head>
+
 <body>
-    
+
     <!-- ==========================================
          1. HEADER & NAVIGATION
          ========================================== -->
@@ -35,11 +37,11 @@
                 <p id="timer">00:00:00:00</p>
             </div>
         </nav>
-            <ul class="nav-mobile" id="nav-mobile">
-                <li><a href="#about" onclick="toggleMobileMenu()">About Us</a></li>
-                <li><a href="#events" onclick="toggleMobileMenu()">Our Events</a></li>
-                <li><a href="#faq" onclick="toggleMobileMenu()">FAQ</a></li>
-            </ul>
+        <ul class="nav-mobile" id="nav-mobile">
+            <li><a href="#about" onclick="toggleMobileMenu()">About Us</a></li>
+            <li><a href="#events" onclick="toggleMobileMenu()">Our Events</a></li>
+            <li><a href="#faq" onclick="toggleMobileMenu()">FAQ</a></li>
+        </ul>
     </header>
 
     <main>
@@ -52,7 +54,7 @@
                     <span class="text-pjj">PJJ</span>
                     <span class="text-challenge">CHALLENGE</span>
                 </h1>
-                <div class="scroll">
+                <div class="scroll" id="scroll-btn" onclick="scrollToAbout()" role="button" tabindex="0">
                     <img src="src/assets/icons/scroll-icn.svg" alt="Scroll icon">
                     <p>Scroll More</p>
                 </div>
@@ -77,9 +79,12 @@
         <section id="about" class="about">
             <h1>About Us</h1>
             <article class="content-about">
-                <p>PJJ Challenge adalah kompetisi digital nasional yang diinisiasi oleh Program Studi Informatika Program Pendidikan Jarak Jauh (PJJ) Universitas Islam Indonesia (UII). Kami hadir sebagai wadah inklusif bagi talenta kreatif dan pemikir kritis di seluruh Indonesia untuk menguji logika, mengasah kreativitas visual, dan menuangkan solusi teknologi tanpa sekat jarak fisik.</p>
+                <p>PJJ Challenge adalah kompetisi digital nasional yang diinisiasi oleh Program Studi Informatika
+                    Program Pendidikan Jarak Jauh (PJJ) Universitas Islam Indonesia (UII). Kami hadir sebagai wadah
+                    inklusif bagi talenta kreatif dan pemikir kritis di seluruh Indonesia untuk menguji logika, mengasah
+                    kreativitas visual, dan menuangkan solusi teknologi tanpa sekat jarak fisik.</p>
             </article>
-            
+
             <div class="journey">
                 <header class="journey-header">
                     <div class="journey-title">
@@ -102,7 +107,7 @@
                         </div>
                     </div>
                 </header>
-                
+
                 <div class="journey-content">
                     <div class="left-journey-content">
                         <div class="journey-bg">
@@ -125,7 +130,7 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="right-journey-content">
                         <!-- Journey Cards -->
                         <div class="journey-card">
@@ -174,8 +179,11 @@
                             <img class="neon-blur1" src="src/assets/graphics/neon-blur1.svg" alt="">
                             <p>Brain Challenge Week</p>
                             <div class="events-btn">
-                                <a class="btn-register" href="https://www.instagram.com/pjj.informatics.uii/">On Instagram!</a>
-                                <button class="btn-detail" onclick="openEventPopup('Brain Challenge Week', 'Asah ketajaman logika dan wawasan teknologimu lewat tantangan kuis harian interaktif di Instagram! Jawab cepat, kumpulkan poin tertinggi, dan menangkan hadiah menarik setiap harinya.', 'https://www.instagram.com/pjj.informatics.uii/', 'https://bit.ly/Guidebook-BrainChallengeWeek')">Detail</button>
+                                <a class="btn-register" href="https://www.instagram.com/pjj.informatics.uii/"
+                                    target="_blank" rel="noopener noreferrer">On
+                                    Instagram!</a>
+                                <button class="btn-detail"
+                                    onclick="openEventPopup('Brain Challenge Week', 'Asah ketajaman logika dan wawasan teknologimu lewat tantangan kuis harian interaktif di Instagram! Jawab cepat, kumpulkan poin tertinggi, dan menangkan hadiah menarik setiap harinya.', 'https://www.instagram.com/pjj.informatics.uii/', 'https://uii.id/GuidebookPJJChallenge2')">Detail</button>
                             </div>
                         </div>
                     </div>
@@ -185,8 +193,11 @@
                             <img class="neon-blur1" src="src/assets/graphics/neon-blur1.svg" alt="">
                             <p>Catch The Moment</p>
                             <div class="events-btn">
-                                <a class="btn-register" href="https://docs.google.com/forms/d/e/1FAIpQLScYjebvwhRCSILhY2_TCQU9msaihVs2Xsl8mgL8XJ-GZ4GkFg/viewform">Daftar Sekarang!</a>
-                                <button class="btn-detail" onclick="openEventPopup('Catch The Moment', 'Ambil momen terbaikmu dalam kompetisi fotografi digital ini. Tunjukkan kreativitasmu dalam menangkap esensi teknologi dan kemanusiaan.', 'https://docs.google.com/forms/d/e/1FAIpQLScYjebvwhRCSILhY2_TCQU9msaihVs2Xsl8mgL8XJ-GZ4GkFg/viewform', 'https://bit.ly/Guidebook-CatchTheMoment')">Detail</button>
+                                <a class="btn-register"
+                                    href="https://docs.google.com/forms/d/e/1FAIpQLScYjebvwhRCSILhY2_TCQU9msaihVs2Xsl8mgL8XJ-GZ4GkFg/viewform"
+                                    target="_blank" rel="noopener noreferrer">Daftar Sekarang!</a>
+                                <button class="btn-detail"
+                                    onclick="openEventPopup('Catch The Moment', 'Ambil momen terbaikmu dalam kompetisi fotografi digital ini. Tunjukkan kreativitasmu dalam menangkap esensi teknologi dan kemanusiaan.', 'https://docs.google.com/forms/d/e/1FAIpQLScYjebvwhRCSILhY2_TCQU9msaihVs2Xsl8mgL8XJ-GZ4GkFg/viewform', 'https://uii.id/GuidebookPJJChallenge2')">Detail</button>
                             </div>
                         </div>
                     </div>
@@ -196,8 +207,11 @@
                             <img class="neon-blur1" src="src/assets/graphics/neon-blur1.svg" alt="">
                             <p>Short Paper</p>
                             <div class="events-btn">
-                                <a class="btn-register" href="https://docs.google.com/forms/d/e/1FAIpQLScYjebvwhRCSILhY2_TCQU9msaihVs2Xsl8mgL8XJ-GZ4GkFg/viewform">Daftar Sekarang!</a>
-                                <button class="btn-detail" onclick="openEventPopup('Short Paper', 'Tuangkan pemikiran kritis dan solutifmu dalam bentuk karya tulis ilmiah pendek. Fokus pada inovasi teknologi informasi masa depan.', 'https://docs.google.com/forms/d/e/1FAIpQLScYjebvwhRCSILhY2_TCQU9msaihVs2Xsl8mgL8XJ-GZ4GkFg/viewform', 'https://bit.ly/Guidebook-ShortPaper')">Detail</button>
+                                <a class="btn-register"
+                                    href="https://docs.google.com/forms/d/e/1FAIpQLScYjebvwhRCSILhY2_TCQU9msaihVs2Xsl8mgL8XJ-GZ4GkFg/viewform"
+                                    target="_blank" rel="noopener noreferrer">Daftar Sekarang!</a>
+                                <button class="btn-detail"
+                                    onclick="openEventPopup('Short Paper', 'Tuangkan pemikiran kritis dan solutifmu dalam bentuk karya tulis ilmiah pendek. Fokus pada inovasi teknologi informasi masa depan.', 'https://docs.google.com/forms/d/e/1FAIpQLScYjebvwhRCSILhY2_TCQU9msaihVs2Xsl8mgL8XJ-GZ4GkFg/viewform', 'https://uii.id/GuidebookPJJChallenge2')">Detail</button>
                             </div>
                         </div>
                     </div>
@@ -207,8 +221,11 @@
                             <img class="neon-blur1" src="src/assets/graphics/neon-blur1.svg" alt="">
                             <p>Essay</p>
                             <div class="events-btn">
-                                <a class="btn-register" href="https://docs.google.com/forms/d/e/1FAIpQLScYjebvwhRCSILhY2_TCQU9msaihVs2Xsl8mgL8XJ-GZ4GkFg/viewform">Daftar Sekarang!</a>
-                                <button class="btn-detail" onclick="openEventPopup('Essay', 'Ekspresikan pandanganmu mengenai perkembangan dunia digital dan dampaknya bagi masyarakat melalui esai yang mendalam.', 'https://docs.google.com/forms/d/e/1FAIpQLScYjebvwhRCSILhY2_TCQU9msaihVs2Xsl8mgL8XJ-GZ4GkFg/viewform', 'https://bit.ly/Guidebook-Essay')">Detail</button>
+                                <a class="btn-register"
+                                    href="https://docs.google.com/forms/d/e/1FAIpQLScYjebvwhRCSILhY2_TCQU9msaihVs2Xsl8mgL8XJ-GZ4GkFg/viewform"
+                                    target="_blank" rel="noopener noreferrer">Daftar Sekarang!</a>
+                                <button class="btn-detail"
+                                    onclick="openEventPopup('Essay', 'Ekspresikan pandanganmu mengenai perkembangan dunia digital dan dampaknya bagi masyarakat melalui esai yang mendalam.', 'https://docs.google.com/forms/d/e/1FAIpQLScYjebvwhRCSILhY2_TCQU9msaihVs2Xsl8mgL8XJ-GZ4GkFg/viewform', 'https://uii.id/GuidebookPJJChallenge2')">Detail</button>
                             </div>
                         </div>
                     </div>
@@ -251,18 +268,22 @@
                         <img class="icn-card-timeline" src="src/assets/icons/icn-file.svg" alt="">
                     </div>
                     <div class="line-timeline"><img src="src/assets/graphics/line-below.svg" alt=""><div class="line-dot"></div></div>
-                    <div class="date-legend"><p>18 - 5 Juli 2026</p></div>
+                    <div class="date-legend"><p>18 - 28 Juni 2026</p></div>
                     <div class="fill-card-timeline"></div>
                 </div>
                 <!-- ... Repeat for other items ... -->
-                 <div class="content-timeline-reverse">
+                <div class="content-timeline-reverse">
                     <div class="card-timeline">
                         <p>Brain Challenge Week</p>
                         <div class="circle-card-timeline"><img src="src/assets/graphics/neon-blur1.svg" alt=""></div>
                         <img class="icn-card-timeline-reverse" src="src/assets/icons/icn-rocket.svg" alt="">
                     </div>
-                    <div class="line-timeline-reverse"><img src="src/assets/graphics/line-above.svg" alt=""><div class="line-dot-reverse"></div></div>
-                    <div class="date-legend"><p>22 - 28 Juni 2026</p></div>
+                    <div class="line-timeline-reverse"><img src="src/assets/graphics/line-above.svg" alt="">
+                        <div class="line-dot-reverse"></div>
+                    </div>
+                    <div class="date-legend">
+                        <p>22 - 28 Juni 2026</p>
+                    </div>
                     <div class="fill-card-timeline"></div>
                 </div>
                 <div class="content-timeline">
@@ -272,7 +293,7 @@
                         <img class="icn-card-timeline" src="src/assets/icons/icn-assesment.svg" alt="">
                     </div>
                     <div class="line-timeline"><img src="src/assets/graphics/line-below.svg" alt=""><div class="line-dot"></div></div>
-                    <div class="date-legend"><p>5 - 9 Juli 2026</p></div>
+                    <div class="date-legend"><p>29 - 2 Juli 2026</p></div>
                     <div class="fill-card-timeline"></div>
                 </div>
                 <div class="content-timeline-reverse">
@@ -282,7 +303,7 @@
                         <img class="icn-card-timeline-reverse" src="src/assets/icons/icn-toa.svg" alt="">
                     </div>
                     <div class="line-timeline-reverse"><img src="src/assets/graphics/line-above.svg" alt=""><div class="line-dot-reverse"></div></div>
-                    <div class="date-legend"><p>9 Juli 2026</p></div>
+                    <div class="date-legend"><p>3 Juli 2026</p></div>
                     <div class="fill-card-timeline"></div>
                 </div>
             </div>
@@ -297,12 +318,23 @@
                 <div class="icn-faq"><img src="src/assets/icons/icn-faq.svg" alt=""></div>
                 <div class="general-question">
                     <div class="card-faq" onclick="toggleFAQ(this)">
-                        <div class="question">Siapa saja yang bisa mengikuti PJJ Challenge dan berapa biaya pendaftarannya?<span class="icon-faq"><iconify-icon icon="line-md:chevron-small-down" style="color: #797979" width="30"></iconify-icon></span></div>
-                        <div class="text-faq"><p>PJJ Challenge TERBUKA UNTUK UMUM dan TANPA BATASAN USIA! Siapa pun kamu, baik pelajar, mahasiswa, maupun profesional, semuanya bisa ikut seru-seruan di sini. Yang paling penting, seluruh rangkaian kompetisi ini 100% GRATIS tanpa dipungut biaya pendaftaran sepeser pun.</p></div>
+                        <div class="question">Siapa saja yang bisa mengikuti PJJ Challenge dan berapa biaya
+                            pendaftarannya?<span class="icon-faq"><iconify-icon icon="line-md:chevron-small-down"
+                                    style="color: #797979" width="30"></iconify-icon></span></div>
+                        <div class="text-faq">
+                            <p>PJJ Challenge TERBUKA UNTUK UMUM dan TANPA BATASAN USIA! Siapa pun kamu, baik pelajar,
+                                mahasiswa, maupun profesional, semuanya bisa ikut seru-seruan di sini. Yang paling
+                                penting, seluruh rangkaian kompetisi ini 100% GRATIS tanpa dipungut biaya pendaftaran
+                                sepeser pun.</p>
+                        </div>
                     </div>
                     <div class="card-faq" onclick="toggleFAQ(this)">
-                        <div class="question">Ada kategori lomba apa saja di PJJ Challenge 2026?<span class="icon-faq"><iconify-icon icon="line-md:chevron-small-down" style="color: #797979" width="30"></iconify-icon></span></div>
-                        <div class="text-faq"><p>Brain Challenge Week, Catch The Moment, Short Paper, Essay</p></div>
+                        <div class="question">Ada kategori lomba apa saja di PJJ Challenge 2026?<span
+                                class="icon-faq"><iconify-icon icon="line-md:chevron-small-down" style="color: #797979"
+                                    width="30"></iconify-icon></span></div>
+                        <div class="text-faq">
+                            <p>Brain Challenge Week, Catch The Moment, Short Paper, Essay</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -314,9 +346,12 @@
         <section id="news" class="recent-update">
             <h1>Recent Update</h1>
             <div class="static-carousel">
-                <a href="https://www.instagram.com/pjj.informatics.uii/" target="_blank" class="card side-card"><img src="src/assets/images/news1.png" alt=""></a>
-                <a href="https://www.instagram.com/pjj.informatics.uii/" target="_blank" class="card center-card"><img src="src/assets/images/news3.png" alt=""></a>
-                <a href="https://www.instagram.com/pjj.informatics.uii/" target="_blank" class="card side-card"><img src="src/assets/images/news2.png" alt=""></a>
+                <a href="https://www.instagram.com/pjj.informatics.uii/" target="_blank" class="card side-card"><img
+                        src="src/assets/images/news1.png" alt=""></a>
+                <a href="https://www.instagram.com/pjj.informatics.uii/" target="_blank" class="card center-card"><img
+                        src="src/assets/images/news3.png" alt=""></a>
+                <a href="https://www.instagram.com/pjj.informatics.uii/" target="_blank" class="card side-card"><img
+                        src="src/assets/images/news2.png" alt=""></a>
             </div>
         </section>
 
@@ -327,7 +362,9 @@
             <div class="support-wrapper">
                 <div class="container-support">
                     <div class="organized-by">
-                        <div class="organized-by-text"><p>Organized by</p><img src="src/assets/graphics/container-organized-by.svg" alt=""></div>
+                        <div class="organized-by-text">
+                            <p>Organized by</p><img src="src/assets/graphics/container-organized-by.svg" alt="">
+                        </div>
                         <img class="pjj-logo" src="src/assets/icons/pjj-icn.svg" alt="">
                     </div>
                     <div class="support-by">
@@ -339,7 +376,9 @@
                     </div>
                 </div>
                 <a href="https://wa.me/6281511210101" target="_blank" class="contact" style="text-decoration: none;">
-                    <div class="contact-content"><img src="src/assets/icons/icn-phone.svg" alt=""><p>Contact: 0815-1121-0101</p></div>
+                    <div class="contact-content"><img src="src/assets/icons/icn-phone.svg" alt="">
+                        <p>Contact: 0815-1121-0101</p>
+                    </div>
                     <img class="contact-wrapper" src="src/assets/graphics/contact-wrapper.svg" alt="">
                 </a>
             </div>
@@ -347,11 +386,13 @@
         </section>
 
         <footer class="footer">
-            <a href="https://www.instagram.com/pjj.informatics.uii/" target="_blank" class="ig-wrapper" style="text-decoration: none;">
+            <a href="https://www.instagram.com/pjj.informatics.uii/" target="_blank" class="ig-wrapper"
+                style="text-decoration: none;">
                 <img src="src/assets/icons/icn_ig.svg" alt="">
                 <p>@pjj.informatics.uii</p>
             </a>
-            <a href="https://informatics.uii.ac.id/pjj" target="_blank" class="web-wrapper" style="text-decoration: none;">
+            <a href="https://informatics.uii.ac.id/pjj" target="_blank" class="web-wrapper"
+                style="text-decoration: none;">
                 <img src="src/assets/icons/icn_web.svg" alt="">
                 <p>informatics.uii.ac.id/pjj</p>
             </a>
@@ -361,4 +402,5 @@
     <!-- JavaScript External -->
     <script src="src/js/main.js"></script>
 </body>
+
 </html>
